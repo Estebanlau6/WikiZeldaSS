@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.Logging;
+using WikiZeldaSS.ViewModels;
 
 namespace WikiZeldaSS
 {
@@ -15,8 +16,10 @@ namespace WikiZeldaSS
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 });
 
+            builder.Services.AddSingleton<MainViewModel>();
+
 #if DEBUG
-    		builder.Logging.AddDebug();
+            builder.Logging.AddDebug();
 #endif
 
             return builder.Build();
