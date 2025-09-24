@@ -1,14 +1,70 @@
-﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-xmlns:vm="clr-namespace:WikiZeldaSS.ViewModels"
-x:Class="WikiZeldaSS.MainPage"
-x:DataType="vm:MainViewModel">
-    <VerticalStackLayout Spacing="10" Padding="20">
-        <Label Text="Nom :" FontSize="18" />
-        <Entry Text="{Binding Name}" />
-        <Label Text="Âge :" FontSize="18" />
-        <Entry Text="{Binding Age, Mode=TwoWay}" Keyboard="Numeric" />
-        <Button Text="Incrémenter l'âge" Command="{Binding IncrementAgeCommand}" />
-        <Label Text="{MultiBinding {Binding Name}, {Binding Age}, StringFormat='Bonjour, {0} ! Vous avez {1} ans.'}" FontSize="16" />
-    </VerticalStackLayout>
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage x:Class="WikiZeldaSS.MainPage"
+             xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="Wiki Zelda Skyward Sword"
+             BackgroundColor="#1a1a2e">
+
+    <ScrollView>
+        <VerticalStackLayout Spacing="20" Padding="30">
+
+            <!-- Titre principal -->
+            <Label Text="Wiki Zelda"
+                   FontSize="36"
+                   FontAttributes="Bold"
+                   TextColor="#ffd700"
+                   HorizontalOptions="Center"
+                   Margin="0,20,0,10" />
+
+            <Label Text="Skyward Sword"
+                   FontSize="24"
+                   FontAttributes="Italic"
+                   TextColor="#87ceeb"
+                   HorizontalOptions="Center"
+                   Margin="0,0,0,30" />
+
+            <!-- Description -->
+            <Label Text="Découvrez l'univers de Zelda Skyward Sword : personnages, objets, lieux et quêtes vous attendent !"
+                   FontSize="16"
+                   TextColor="White"
+                   HorizontalOptions="Center"
+                   HorizontalTextAlignment="Center"
+                   Margin="0,0,0,30" />
+
+            <!-- Boutons de navigation -->
+            <Button Text="🧙‍♂️ Personnages"
+                    FontSize="18"
+                    BackgroundColor="#4a90e2"
+                    TextColor="White"
+                    CornerRadius="10"
+                    HeightRequest="50"
+                    Clicked="OnPersonnagesClicked" />
+
+            <Button Text="⚔️ Objets"
+                    FontSize="18"
+                    BackgroundColor="#e74c3c"
+                    TextColor="White"
+                    CornerRadius="10"
+                    HeightRequest="50"
+                    Clicked="OnObjetsClicked" />
+
+            <Button Text="🏔️ Lieux"
+                    FontSize="18"
+                    BackgroundColor="#27ae60"
+                    TextColor="White"
+                    CornerRadius="10"
+                    HeightRequest="50"
+                    Clicked="OnLieuxClicked" />
+
+            <Button Text="📜 Quêtes"
+                    FontSize="18"
+                    BackgroundColor="#f39c12"
+                    TextColor="White"
+                    CornerRadius="10"
+                    HeightRequest="50"
+                    Clicked="OnQuetesClicked" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
 </ContentPage>

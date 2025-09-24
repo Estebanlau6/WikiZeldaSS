@@ -24,5 +24,7 @@ namespace WikiZeldaSS
 
             return builder.Build();
         }
+
     }
+
 }
