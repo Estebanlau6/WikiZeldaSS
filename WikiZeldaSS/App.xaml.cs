@@ -5,7 +5,7 @@
         public App(AppShell shell)
         {
             InitializeComponent();
-            _shell = shell;
+            MainPage = shell;
         }
 
     }

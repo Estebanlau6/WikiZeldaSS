@@ -16,12 +16,14 @@ namespace WikiZeldaSS
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 });
 
+            builder.Services.AddSingleton<AppShell>();
+            builder.Services.AddSingleton<MainPage>();
             builder.Services.AddSingleton<MainViewModel>();
+            builder.Services.AddSingleton<LieuxPage>();
 
 #if DEBUG
             builder.Logging.AddDebug();
 #endif
-            builder.Services.AddSingleton<AppShell>();
             return builder.Build();
         }
 
