@@ -2,11 +2,104 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="WikiZeldaSS.ObjetsPage"
-             Title="ObjetsPage">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+             Title="Objets"
+             BackgroundColor="#1a1a2e">
+
+    <ScrollView>
+        <VerticalStackLayout Spacing="15" Padding="20">
+
+            <Label Text="Objets de Skyward Sword"
+                   FontSize="28"
+                   FontAttributes="Bold"
+                   TextColor="#ffd700"
+                   HorizontalOptions="Center"
+                   Margin="0,10,0,20" />
+
+            <!-- Épée de Légende -->
+            <Frame BackgroundColor="#2c3e50" CornerRadius="10" Padding="15">
+                <VerticalStackLayout>
+                    <Label Text="🗡️ Épée de Légende"
+                           FontSize="20"
+                           FontAttributes="Bold"
+                           TextColor="#87ceeb" />
+                    <Label Text="L’arme principale de Link, qui évolue au fil de l’aventure jusqu’à devenir la Master Sword."
+                           FontSize="14"
+                           TextColor="White"
+                           LineBreakMode="WordWrap" />
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Bouclier Hylien -->
+            <Frame BackgroundColor="#2c3e50" CornerRadius="10" Padding="15">
+                <VerticalStackLayout>
+                    <Label Text="🛡️ Bouclier Hylien"
+                           FontSize="20"
+                           FontAttributes="Bold"
+                           TextColor="#27ae60" />
+                    <Label Text="Bouclier légendaire quasi indestructible. Récompense ultime après un combat acharné."
+                           FontSize="14"
+                           TextColor="White"
+                           LineBreakMode="WordWrap" />
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Scarabée -->
+            <Frame BackgroundColor="#2c3e50" CornerRadius="10" Padding="15">
+                <VerticalStackLayout>
+                    <Label Text="🐞 Scarabée"
+                           FontSize="20"
+                           FontAttributes="Bold"
+                           TextColor="#f39c12" />
+                    <Label Text="Petit insecte mécanique télécommandé par Link. Sert à activer des mécanismes et ramasser des objets."
+                           FontSize="14"
+                           TextColor="White"
+                           LineBreakMode="WordWrap" />
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Arc -->
+            <Frame BackgroundColor="#2c3e50" CornerRadius="10" Padding="15">
+                <VerticalStackLayout>
+                    <Label Text="🏹 Arc"
+                           FontSize="20"
+                           FontAttributes="Bold"
+                           TextColor="#e74c3c" />
+                    <Label Text="Permet de tirer des flèches avec précision, utile contre les ennemis volants ou éloignés."
+                           FontSize="14"
+                           TextColor="White"
+                           LineBreakMode="WordWrap" />
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Fouet -->
+            <Frame BackgroundColor="#2c3e50" CornerRadius="10" Padding="15">
+                <VerticalStackLayout>
+                    <Label Text="🔗 Fouet"
+                           FontSize="20"
+                           FontAttributes="Bold"
+                           TextColor="#9b59b6" />
+                    <Label Text="Outil polyvalent permettant d’attraper des objets, activer des leviers et même désarmer les ennemis."
+                           FontSize="14"
+                           TextColor="White"
+                           LineBreakMode="WordWrap" />
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Grappin -->
+            <Frame BackgroundColor="#2c3e50" CornerRadius="10" Padding="15">
+                <VerticalStackLayout>
+                    <Label Text="⚓ Grappin"
+                           FontSize="20"
+                           FontAttributes="Bold"
+                           TextColor="#3498db" />
+                    <Label Text="Double grappin permettant à Link de se balancer d’un point d’accroche à l’autre."
+                           FontSize="14"
+                           TextColor="White"
+                           LineBreakMode="WordWrap" />
+                </VerticalStackLayout>
+            </Frame>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
 </ContentPage>
