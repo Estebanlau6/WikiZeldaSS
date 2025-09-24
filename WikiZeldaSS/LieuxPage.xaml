@@ -1,12 +1,105 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="WikiZeldaSS.LieuxPage"
-             Title="LieuxPage">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
-</ContentPage>
+             Title="Lieux"
+             BackgroundColor="#1a1a2e">
+
+        <ScrollView>
+            <VerticalStackLayout Spacing="15" Padding="20">
+
+                <Label Text="Lieux de Skyward Sword"
+                   FontSize="28"
+                   FontAttributes="Bold"
+                   TextColor="#ffd700"
+                   HorizontalOptions="Center"
+                   Margin="0,10,0,20" />
+
+                <!-- Célesbourg -->
+                <Frame BackgroundColor="#2c3e50" CornerRadius="10" Padding="15">
+                    <VerticalStackLayout>
+                        <Label Text="☁️ Célesbourg"
+                           FontSize="20"
+                           FontAttributes="Bold"
+                           TextColor="#87ceeb" />
+                        <Label Text="Ville flottante dans les cieux où vit Link. Abrite l'Académie des Chevaliers et le Pilier de Lumière."
+                           FontSize="14"
+                           TextColor="White"
+                           LineBreakMode="WordWrap" />
+                    </VerticalStackLayout>
+                </Frame>
+
+                <!-- Forêt de Firone -->
+                <Frame BackgroundColor="#2c3e50" CornerRadius="10" Padding="15">
+                    <VerticalStackLayout>
+                        <Label Text="🌲 Forêt de Firone"
+                           FontSize="20"
+                           FontAttributes="Bold"
+                           TextColor="#27ae60" />
+                        <Label Text="Dense forêt tropicale avec de nombreux temples et secrets. Premier lieu visité par Link au sol."
+                           FontSize="14"
+                           TextColor="White"
+                           LineBreakMode="WordWrap" />
+                    </VerticalStackLayout>
+                </Frame>
+
+                <!-- Volcan d'Ordinn -->
+                <Frame BackgroundColor="#2c3e50" CornerRadius="10" Padding="15">
+                    <VerticalStackLayout>
+                        <Label Text="🌋 Volcan d'Ordinn"
+                           FontSize="20"
+                           FontAttributes="Bold"
+                           TextColor="#e74c3c" />
+                        <Label Text="Région volcanique dangereuse habitée par les Mogmas. Contient le Temple de la Terre."
+                           FontSize="14"
+                           TextColor="White"
+                           LineBreakMode="WordWrap" />
+                    </VerticalStackLayout>
+                </Frame>
+
+                <!-- Désert de Lanelle -->
+                <Frame BackgroundColor="#2c3e50" CornerRadius="10" Padding="15">
+                    <VerticalStackLayout>
+                        <Label Text="🏜️ Désert de Lanelle"
+                           FontSize="20"
+                           FontAttributes="Bold"
+                           TextColor="#f39c12" />
+                        <Label Text="Vaste désert avec des mécanismes temporels. Abrite les ruines du Temple de Lanelle."
+                           FontSize="14"
+                           TextColor="White"
+                           LineBreakMode="WordWrap" />
+                    </VerticalStackLayout>
+                </Frame>
+
+                <!-- Temple du Temps -->
+                <Frame BackgroundColor="#2c3e50" CornerRadius="10" Padding="15">
+                    <VerticalStackLayout>
+                        <Label Text="⏰ Temple du Temps"
+                           FontSize="20"
+                           FontAttributes="Bold"
+                           TextColor="#9b59b6" />
+                        <Label Text="Temple mystérieux permettant les voyages temporels. Point central de l'intrigue."
+                           FontSize="14"
+                           TextColor="White"
+                           LineBreakMode="WordWrap" />
+                    </VerticalStackLayout>
+                </Frame>
+
+                <!-- Ciel -->
+                <Frame BackgroundColor="#2c3e50" CornerRadius="10" Padding="15">
+                    <VerticalStackLayout>
+                        <Label Text="🌤️ Le Ciel"
+                           FontSize="20"
+                           FontAttributes="Bold"
+                           TextColor="#3498db" />
+                        <Label Text="Vaste étendue céleste parsemée d'îles flottantes. Link y vole avec son Célestrier."
+                           FontSize="14"
+                           TextColor="White"
+                           LineBreakMode="WordWrap" />
+                    </VerticalStackLayout>
+                </Frame>
+
+            </VerticalStackLayout>
+        </ScrollView>
+
+    </ContentPage>

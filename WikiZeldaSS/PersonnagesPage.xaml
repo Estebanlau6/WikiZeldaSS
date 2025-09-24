@@ -2,11 +2,90 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="WikiZeldaSS.PersonnagesPage"
-             Title="PersonnagesPage">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+             Title="Personnages"
+             BackgroundColor="#1a1a2e">
+
+    <ScrollView>
+        <VerticalStackLayout Spacing="15" Padding="20">
+
+            <Label Text="Personnages de Skyward Sword"
+                   FontSize="28"
+                   FontAttributes="Bold"
+                   TextColor="#ffd700"
+                   HorizontalOptions="Center"
+                   Margin="0,10,0,20" />
+
+            <!-- Link -->
+            <Frame BackgroundColor="#2c3e50" CornerRadius="10" Padding="15">
+                <VerticalStackLayout>
+                    <Label Text="🗡️ Link"
+                           FontSize="20"
+                           FontAttributes="Bold"
+                           TextColor="#3498db" />
+                    <Label Text="Le héros de l'aventure. Étudiant à l'Académie des Chevaliers de Célesbourg, il est choisi par l'Épée Divine pour sauver Zelda."
+                           FontSize="14"
+                           TextColor="White"
+                           LineBreakMode="WordWrap" />
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Zelda -->
+            <Frame BackgroundColor="#2c3e50" CornerRadius="10" Padding="15">
+                <VerticalStackLayout>
+                    <Label Text="👸 Princesse Zelda"
+                           FontSize="20"
+                           FontAttributes="Bold"
+                           TextColor="#e91e63" />
+                    <Label Text="Étudiante à l'Académie et amie d'enfance de Link. Elle est la réincarnation de la déesse Hylia."
+                           FontSize="14"
+                           TextColor="White"
+                           LineBreakMode="WordWrap" />
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Ghirahim -->
+            <Frame BackgroundColor="#2c3e50" CornerRadius="10" Padding="15">
+                <VerticalStackLayout>
+                    <Label Text="👹 Ghirahim"
+                           FontSize="20"
+                           FontAttributes="Bold"
+                           TextColor="#9c27b0" />
+                    <Label Text="Le Seigneur Démon, antagoniste principal. Il cherche à ressusciter son maître Demise."
+                           FontSize="14"
+                           TextColor="White"
+                           LineBreakMode="WordWrap" />
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Fi -->
+            <Frame BackgroundColor="#2c3e50" CornerRadius="10" Padding="15">
+                <VerticalStackLayout>
+                    <Label Text="⚔️ Fi"
+                           FontSize="20"
+                           FontAttributes="Bold"
+                           TextColor="#00bcd4" />
+                    <Label Text="L'esprit de l'Épée Divine qui guide Link dans sa quête."
+                           FontSize="14"
+                           TextColor="White"
+                           LineBreakMode="WordWrap" />
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Impa -->
+            <Frame BackgroundColor="#2c3e50" CornerRadius="10" Padding="15">
+                <VerticalStackLayout>
+                    <Label Text="🛡️ Impa"
+                           FontSize="20"
+                           FontAttributes="Bold"
+                           TextColor="#ff9800" />
+                    <Label Text="Gardienne Sheikah protectrice de Zelda à travers le temps."
+                           FontSize="14"
+                           TextColor="White"
+                           LineBreakMode="WordWrap" />
+                </VerticalStackLayout>
+            </Frame>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
 </ContentPage>
