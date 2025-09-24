@@ -21,7 +21,7 @@ namespace WikiZeldaSS
 #if DEBUG
             builder.Logging.AddDebug();
 #endif
-
+            builder.Services.AddSingleton<AppShell>();
             return builder.Build();
         }
 
