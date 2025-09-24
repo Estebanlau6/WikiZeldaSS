@@ -1,8 +1,8 @@
 namespace WikiZeldaSS;
 
-public partial class NewPage1 : ContentPage
+public partial class PersonnagesPage : ContentPage
 {
-	public NewPage1()
+	public PersonnagesPage()
 	{
 		InitializeComponent();
 	}
