@@ -1,6 +1,7 @@
 ﻿using Microsoft.Extensions.Logging;
 using WikiZeldaSS.Database;
 using WikiZeldaSS.ViewModels;
+using WikiZeldaSS.Pages;
 
 namespace WikiZeldaSS
 {
