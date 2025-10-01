@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WikiZeldaSS.ViewModels;
 
-internal class ObjetsViewModel
+public class ObjetsViewModel
 {
 
 }
