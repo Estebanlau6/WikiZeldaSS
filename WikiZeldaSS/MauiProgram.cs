@@ -21,6 +21,8 @@ namespace WikiZeldaSS
             builder.Services.AddSingleton<MainViewModel>();
             builder.Services.AddSingleton<LieuxPage>();
 
+            builder.Services.AddSingleton<DatabaseService>();
+
 #if DEBUG
             builder.Logging.AddDebug();
 #endif
