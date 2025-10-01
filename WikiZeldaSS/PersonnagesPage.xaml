@@ -16,7 +16,7 @@
                    Margin="0,10,0,20" />
 
             <!-- Link -->
-            <Frame BackgroundColor="#2c3e50" CornerRadius="10" Padding="15">
+            <Border BackgroundColor="#2c3e50" Padding="15" StrokeShape="RoundRectangle 10">
                 <VerticalStackLayout>
                     <Label Text="🗡️ Link"
                            FontSize="20"
@@ -27,10 +27,10 @@
                            TextColor="White"
                            LineBreakMode="WordWrap" />
                 </VerticalStackLayout>
-            </Frame>
+            </Border>
 
             <!-- Zelda -->
-            <Frame BackgroundColor="#2c3e50" CornerRadius="10" Padding="15">
+            <Border BackgroundColor="#2c3e50" Padding="15" StrokeShape="RoundRectangle 10">
                 <VerticalStackLayout>
                     <Label Text="👸 Princesse Zelda"
                            FontSize="20"
@@ -41,10 +41,10 @@
                            TextColor="White"
                            LineBreakMode="WordWrap" />
                 </VerticalStackLayout>
-            </Frame>
+            </Border>
 
             <!-- Ghirahim -->
-            <Frame BackgroundColor="#2c3e50" CornerRadius="10" Padding="15">
+            <Border BackgroundColor="#2c3e50" Padding="15" StrokeShape="RoundRectangle 10">
                 <VerticalStackLayout>
                     <Label Text="👹 Ghirahim"
                            FontSize="20"
@@ -55,10 +55,10 @@
                            TextColor="White"
                            LineBreakMode="WordWrap" />
                 </VerticalStackLayout>
-            </Frame>
+            </Border>
 
             <!-- Fi -->
-            <Frame BackgroundColor="#2c3e50" CornerRadius="10" Padding="15">
+            <Border BackgroundColor="#2c3e50" Padding="15" StrokeShape="RoundRectangle 10">
                 <VerticalStackLayout>
                     <Label Text="⚔️ Fi"
                            FontSize="20"
@@ -69,10 +69,10 @@
                            TextColor="White"
                            LineBreakMode="WordWrap" />
                 </VerticalStackLayout>
-            </Frame>
+            </Border>
 
             <!-- Impa -->
-            <Frame BackgroundColor="#2c3e50" CornerRadius="10" Padding="15">
+            <Border Background="#2c3e50" Padding="15" StrokeShape="RoundRectangle 10">
                 <VerticalStackLayout>
                     <Label Text="🛡️ Impa"
                            FontSize="20"
@@ -83,7 +83,7 @@
                            TextColor="White"
                            LineBreakMode="WordWrap" />
                 </VerticalStackLayout>
-            </Frame>
+            </Border>
 
         </VerticalStackLayout>
     </ScrollView>
