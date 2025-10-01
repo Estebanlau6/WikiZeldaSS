@@ -58,6 +58,26 @@ namespace WikiZeldaSS.Database
             return _database.Delete(item);
         }
 
+        public List<Quete> GetQuetes()
+        {
+            return _database.GetAllWithChildren<Quete>(recursive: true)
+                .OrderBy(x => x.Nom)
+                .ToList();
+        }
+
+        public int SaveQuete(Quete item)
+        {
+            if (item.Id != 0)
+                return _database.Update(item);
+            else
+                return _database.Insert(item);
+        }
+
+        public int DeleteQuete(Quete item)
+        {
+            return _database.Delete(item);
+        }
+
 
     }
 }

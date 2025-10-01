@@ -1,12 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.ObjectModel;
+using WikiZeldaSS.Database;
+using WikiZeldaSS.Models;
+
 
 namespace WikiZeldaSS.ViewModels;
 
-public class QuetesViewModel : ObservableObject
+public class QuetesViewModel
 {
-    [ObservableProperty]
+    private readonly DatabaseService _databaseService;
+
+    public ObservableCollection<Quete> Quetes { get; set; }
+
+    public QuetesViewModel(DatabaseService databaseService)
+    {
+        _databaseService = databaseService;
+        Quetes = new ObservableCollection<Quete>(_databaseService.GetQuetes());
+    }
 }
