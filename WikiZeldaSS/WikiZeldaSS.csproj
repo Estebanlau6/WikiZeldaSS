@@ -68,22 +68,22 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Compile Update="PersonnagesPage.xaml.cs">
+	  <Compile Update="Pages\PersonnagesPage.xaml.cs">
 	    <DependentUpon>PersonnagesPage.xaml</DependentUpon>
 	  </Compile>
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="LieuxPage.xaml">
+	  <MauiXaml Update="Pages\LieuxPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="ObjetsPage.xaml">
+	  <MauiXaml Update="Pages\ObjetsPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="PersonnagesPage.xaml">
+	  <MauiXaml Update="Pages\PersonnagesPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="QuetesPage.xaml">
+	  <MauiXaml Update="Pages\QuetesPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

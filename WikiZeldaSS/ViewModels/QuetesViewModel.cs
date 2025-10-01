@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WikiZeldaSS.ViewModels;
 
-public class QuetesViewModel
+public class QuetesViewModel : ObservableObject
 {
-
+    [ObservableProperty]
 }

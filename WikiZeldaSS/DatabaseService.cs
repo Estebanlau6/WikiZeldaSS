@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using SQLite;
+using SQLiteNetExtensions.Extensions;
 using WikiZeldaSS.Models;
 
 namespace WikiZeldaSS
@@ -28,5 +29,24 @@ namespace WikiZeldaSS
             _database.CreateTable<Personnage>();
             
         }
+        public List<Personnage> GetPersonnes()
+        {
+            return _database.GetAllWithChildren<Personnage>(recursive: true)
+                .OrderBy(x => x.Nom)
+                .ToList();
+        }
+        public Task<int> SavePersonne(Personnage item)
+        {
+            if (item.Id != 0)
+                return _database.Update(item); // update si déjà existant
+            else
+                return _database.Insert(item); // sinon insertion
+        }
+        public Task<int> DeletePersonne(Personnage item)
+        {
+            return _database.Delete(item);
+        }
+
+
     }
 }
