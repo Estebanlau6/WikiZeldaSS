@@ -7,7 +7,7 @@ using SQLite;
 using SQLiteNetExtensions.Extensions;
 using WikiZeldaSS.Models;
 
-namespace WikiZeldaSS
+namespace WikiZeldaSS.Database
 {
     public partial class DatabaseService
     {

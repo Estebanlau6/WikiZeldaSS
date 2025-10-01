@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.Logging;
+using WikiZeldaSS.Database;
 using WikiZeldaSS.ViewModels;
 
 namespace WikiZeldaSS
