@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WikiZeldaSS.ViewModels
+namespace WikiZeldaSS.ViewModels;
+
+internal class LieuxViewModel
 {
-    internal class LieuxViewModel
-    {
-    }
+
 }

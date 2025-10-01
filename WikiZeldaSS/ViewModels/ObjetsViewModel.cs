@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WikiZeldaSS.ViewModels
-{
-    internal class ObjetsViewModel()
-    {
+namespace WikiZeldaSS.ViewModels;
 
-    }
+internal class ObjetsViewModel
+{
+
 }

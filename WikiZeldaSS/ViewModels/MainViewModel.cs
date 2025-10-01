@@ -7,23 +7,22 @@ using System.Xml.Linq;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 
-namespace WikiZeldaSS.ViewModels
+namespace WikiZeldaSS.ViewModels;
+
+public partial class MainViewModel : ObservableObject
 {
-    public partial class MainViewModel : ObservableObject
+    [ObservableProperty]
+    private string _name;
+    [ObservableProperty]
+    private int _age;
+    public MainViewModel()
     {
-        [ObservableProperty]
-        private string _name;
-        [ObservableProperty]
-        private int _age;
-        public MainViewModel()
-        {
-            Name = "John Doe";
-            Age = 25;
-        }
-        [RelayCommand]
-        public void IncrementAge()
-        {
-            Age++;
-        }
+        Name = "John Doe";
+        Age = 25;
+    }
+    [RelayCommand]
+    public void IncrementAge()
+    {
+        Age++;
     }
 }

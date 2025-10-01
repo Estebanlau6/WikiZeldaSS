@@ -1,9 +1,12 @@
+using WikiZeldaSS.ViewModels;
+
 namespace WikiZeldaSS;
 
 public partial class QuetesPage : ContentPage
 {
-	public QuetesPage()
+	public QuetesPage(QuetesViewModel viewModel)
 	{
 		InitializeComponent();
-	}
+        BindingContext = viewModel;
+    }
 }
