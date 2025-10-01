@@ -1,9 +1,12 @@
+using WikiZeldaSS.ViewModels;
+
 namespace WikiZeldaSS;
 
 public partial class ObjetsPage : ContentPage
 {
-	public ObjetsPage()
+    public ObjetsPage(ObjetsViewModel viewModel)
 	{
 		InitializeComponent();
-	}
+		BindingContext = viewModel;
+    }
 }
