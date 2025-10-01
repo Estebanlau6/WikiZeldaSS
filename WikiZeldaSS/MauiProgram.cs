@@ -21,6 +21,8 @@ namespace WikiZeldaSS
             builder.Services.AddSingleton<AppShell>();
             builder.Services.AddSingleton<MainPage>();
             builder.Services.AddSingleton<MainViewModel>();
+            builder.Services.AddSingleton<PersonnagesPage>();
+            builder.Services.AddSingleton<PersonnagesViewModel>();
             builder.Services.AddSingleton<LieuxPage>();
 
             builder.Services.AddSingleton<DatabaseService>();
