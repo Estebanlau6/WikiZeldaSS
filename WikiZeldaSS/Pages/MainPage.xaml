@@ -1,11 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage x:Class="WikiZeldaSS.MainPage"
+<ContentPage x:Class="WikiZeldaSS.Pages.MainPage"
              xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:vm="clr-namespace:WikiZeldaSS.ViewModels"
              Title="Wiki Zelda Skyward Sword"
              BackgroundColor="#1a1a2e"
              x:DataType="vm:MainViewModel">
+
 
     <ScrollView>
         <VerticalStackLayout Spacing="20" Padding="30">

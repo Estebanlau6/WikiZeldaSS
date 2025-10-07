@@ -1,6 +1,6 @@
 ﻿using WikiZeldaSS.ViewModels;
 
-namespace WikiZeldaSS
+namespace WikiZeldaSS.Pages
 {
     public partial class MainPage : ContentPage
     {
