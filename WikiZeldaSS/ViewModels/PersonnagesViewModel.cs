@@ -15,4 +15,9 @@ public class PersonnagesViewModel
         _databaseService = databaseService;
         Personnages = new ObservableCollection<Personnage>(_databaseService.GetPersonnes());
     }
+
+    public List<Personnage> GetPagePersonne()
+    {
+        return _databaseService.GetPersonnes();
+    }
 }

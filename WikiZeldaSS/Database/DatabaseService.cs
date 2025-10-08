@@ -28,16 +28,7 @@ namespace WikiZeldaSS.Database
             _database = new SQLiteConnection(DatabasePath, Flags);
             //Création des tables
             _database.CreateTable<Personnage>();
-            _database.DeleteAll<Personnage>();
-            //Ajout de données de test
-            _database.InsertAll(new List<Personnage>
-                        {
-                            new Personnage { Nom = "Link", Description = "Le héros de l'aventure. Étudiant à l'Académie des Chevaliers.", Role = "Héros", Emoji = "🗡️" },
-                            new Personnage { Nom = "Zelda", Description = "Princesse et réincarnation de la déesse Hylia.", Role = "Princesse", Emoji = "👸" },
-                            new Personnage { Nom = "Ghirahim", Description = "Le Seigneur Démon, antagoniste principal.", Role = "Antagoniste", Emoji = "👹" },
-                            new Personnage { Nom = "Fi", Description = "L'esprit de l'Épée Divine qui guide Link.", Role = "Guide", Emoji = "⚔️" },
-                            new Personnage { Nom = "Impa", Description = "Gardienne Sheikah protectrice de Zelda.", Role = "Gardienne", Emoji = "🛡️" }
-                        });
+            _database.CreateTable<Quete>();
         }
         public List<Personnage> GetPersonnes()
         {
@@ -78,6 +69,12 @@ namespace WikiZeldaSS.Database
             return _database.Delete(item);
         }
 
+        public ObservableCollection<Personnage> Personnages { get; set; }
+
+        public PersonnagesViewModel(DatabaseService db)
+        {
+            Personnages = new ObservableCollection<Personnage>(db.GetPersonnes());
+        }
 
     }
 }
