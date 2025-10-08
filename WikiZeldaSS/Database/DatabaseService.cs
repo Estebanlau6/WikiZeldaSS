@@ -178,7 +178,7 @@ namespace WikiZeldaSS.Database
             });
 
             _database.Insert(new Lieu {
-                Nom = "Montagne d'Ordinn",
+                Nom = "Volcan d'Ordinn",
                 DescriptionCourt = "Une montagne volcanique dangereuse, abritant des ennemis puissants et des trésors cachés.",
                 DescriptionLong = "",
                 Region = "Hyrule",
@@ -194,9 +194,17 @@ namespace WikiZeldaSS.Database
                 Couleur = "#f39c12"
             });
 
-
+            _database.Insert(new Lieu { 
+                Nom = "temple du Temps",
+                DescriptionCourt = "Un lieu sacré où le temps peut être manipulé, souvent lié à la légende de la Master Sword.",
+                DescriptionLong = "",
+                Region = "Hyrule",
+                Emoji = "⏳",
+                Couleur = "#9b59b6"
+            });
 
         }
+
         public List<Personnage> GetPersonnes()
         {
             return _database.GetAllWithChildren<Personnage>(recursive: true)
