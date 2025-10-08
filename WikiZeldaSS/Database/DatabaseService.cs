@@ -40,7 +40,8 @@ namespace WikiZeldaSS.Database
                 Nom = "Link",
                 DescriptionCourt = "Le héros principal de la série, souvent chargé de sauver la princesse Zelda et de vaincre Ganon.",
                 Role = "Héros",
-                Emoji = "🗡️"
+                Emoji = "🗡️" ,
+                Couleur = "#00FF00"
             });
             _database.Insert(new Personnage {
                 Nom = "Zelda",
@@ -59,8 +60,14 @@ namespace WikiZeldaSS.Database
                 DescriptionCourt = "Une membre du clan Sheikah, souvent protectrice de la princesse Zelda.",
                 Role = "Protectrice",
                 Emoji = "🛡️"
+            }); 
+            _database.Insert(new Personnage {                 
+                Nom = "Celestrier",
+                DescriptionCourt = "Chaque habitant de Célesbourg possède son propre célestrier, qu'il appelle en sifflant et monte pour voyager dans le Ciel. On dit qu'ils sont là pour protéger les habitants de Célesbourg.",
+                Role = "Monture",
+                Emoji = "🐴"
             });
-            
+
 
 
         }
