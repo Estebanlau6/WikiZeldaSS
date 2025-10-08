@@ -14,5 +14,9 @@ namespace WikiZeldaSS.Models
         public string? Description { get; set; }
         public string? Region { get; set; }
         public string? Emoji { get; set; }
+
+        public string? Couleur { get; set; }
+
+        public string? DescriptionCourt { get; set; }
     }
 }

@@ -98,6 +98,40 @@ namespace WikiZeldaSS.Database
                 Couleur = ""
             });
 
+            _database.Insert(new Lieu {
+                Nom = "Célesbourg",
+                DescriptionCourt = "Un village flottant dans le ciel, habité par des humains et des célestriers.",
+                Region = "Ciel",
+                Emoji = "🏘️"
+            });
+
+            _database.Insert(new Lieu {
+                Nom = "Forêt de Firone",
+                DescriptionCourt = "Une vaste forêt mystérieuse, souvent le point de départ des aventures de Link.",
+                Region = "Hyrule",
+                Emoji = "🌲"
+            });
+
+            _database.Insert(new Lieu {
+                Nom = "Château d'Hyrule",
+                DescriptionCourt = "Le siège du pouvoir royal, souvent attaqué par Ganon.",
+                Region = "Hyrule",
+                Emoji = "🏰"
+            });
+
+            _database.Insert(new Lieu {
+                Nom = "Montagne d'Ordinn",
+                DescriptionCourt = "Une montagne volcanique dangereuse, abritant des ennemis puissants et des trésors cachés.",
+                Region = "Hyrule",
+                Emoji = "⛰️"
+                });
+            _database.Insert(new Lieu {
+                Nom = "Desert de Lanele",
+                DescriptionCourt = "Un vaste désert aride, rempli de ruines anciennes et de créatures hostiles.",
+                Region = "Hyrule",
+                Emoji = "🏜️"
+                });
+
 
 
         }
