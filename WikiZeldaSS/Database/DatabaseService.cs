@@ -47,25 +47,29 @@ namespace WikiZeldaSS.Database
                 Nom = "Zelda",
                 DescriptionCourt = "La princesse du royaume d'Hyrule, souvent enlevée par Ganon et sauvée par Link.",
                 Role = "Princesse",
-                Emoji = "👸"
+                Emoji = "👸",
+                Couleur = "#FFD700"
             });
             _database.Insert(new Personnage {
                 Nom = "Ganon",
                 DescriptionCourt = "L'antagoniste principal de la série, souvent représenté comme un puissant sorcier ou un démon.",
                 Role = "Antagoniste",
-                Emoji = "👹"
+                Emoji = "👹",
+                Couleur = "#FF0000"
             });
             _database.Insert(new Personnage {
                 Nom = "Impa",
                 DescriptionCourt = "Une membre du clan Sheikah, souvent protectrice de la princesse Zelda.",
                 Role = "Protectrice",
-                Emoji = "🛡️"
+                Emoji = "🛡️",
+                Couleur = "#0000FF"
             }); 
             _database.Insert(new Personnage {                 
                 Nom = "Celestrier",
                 DescriptionCourt = "Chaque habitant de Célesbourg possède son propre célestrier, qu'il appelle en sifflant et monte pour voyager dans le Ciel. On dit qu'ils sont là pour protéger les habitants de Célesbourg.",
                 Role = "Monture",
-                Emoji = "🐴"
+                Emoji = "🐴",
+                Couleur = "#A52A2A"
             });
 
             _database.Insert(new Objet 
@@ -74,28 +78,28 @@ namespace WikiZeldaSS.Database
                 DescriptionCourt = "L’arme principale de Link, qui évolue au fil de l’aventure jusqu’à devenir la Master Sword.",
                 DescriptionLong = "",
                 Emoji = "🗡️",
-                Couleur = ""
+                Couleur = "#00FF00"
             });
             _database.Insert(new Objet {
                 Nom = "Bouclier Hylien",
                 DescriptionCourt = "La princesse du royaume d'Hyrule, souvent enlevée par Ganon et sauvée par Link.",
                 DescriptionLong = "",
                 Emoji = "🛡️",
-                Couleur = ""
+                Couleur = "#0000FF"
             });
             _database.Insert(new Objet {
                 Nom = "Scarabée",
                 DescriptionCourt = "Petit insecte mécanique télécommandé par Link. Sert à activer des mécanismes et ramasser des objets.",
                 DescriptionLong = "",
                 Emoji = "🐞",
-                Couleur = ""
+                Couleur = "#9b59b6"
             });
             _database.Insert(new Objet {
                 Nom = "Arc",
                 DescriptionCourt = "Permet de tirer des flèches avec précision, utile contre les ennemis volants ou éloignés.",
                 DescriptionLong = "",
                 Emoji = "🏹",
-                Couleur = ""
+                Couleur = "#8e44ad"
             });
             _database.Insert(new Quete
             {
@@ -183,7 +187,7 @@ namespace WikiZeldaSS.Database
                 DescriptionLong = "",
                 Region = "Hyrule",
                 Emoji = "⛰️",
-                Couleur = ""
+                Couleur = "#e74c3c"
             });
             _database.Insert(new Lieu {
                 Nom = "Desert de Lanele",
@@ -195,7 +199,7 @@ namespace WikiZeldaSS.Database
             });
 
             _database.Insert(new Lieu { 
-                Nom = "temple du Temps",
+                Nom = "Temple du Temps",
                 DescriptionCourt = "Un lieu sacré où le temps peut être manipulé, souvent lié à la légende de la Master Sword.",
                 DescriptionLong = "",
                 Region = "Hyrule",

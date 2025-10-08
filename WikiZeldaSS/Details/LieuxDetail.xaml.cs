@@ -1,9 +1,12 @@
+using WikiZeldaSS.ViewModels;
+
 namespace WikiZeldaSS.Details;
 
-public partial class LieuxDetail : ContentPage
+public partial class LieuxPage : ContentPage
 {
-	public LieuxDetail()
-	{
-		InitializeComponent();
-	}
+    public LieuxPage()
+    {
+        InitializeComponent();
+        BindingContext = new LieuxDetailViewModel(new Database.DatabaseService());
+    }
 }
