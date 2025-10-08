@@ -12,7 +12,7 @@ namespace WikiZeldaSS.Database
 {
     public partial class DatabaseService
     {
-        private SQLiteConnection _database;
+        private readonly SQLiteConnection _database; // Ajout de readonly pour plus de clarté
         public const string DatabaseFilename = "TodoSQLite.db3";
         public const SQLiteOpenFlags Flags =
         // open the database in read/write mode
@@ -29,6 +29,7 @@ namespace WikiZeldaSS.Database
             //Création des tables
             _database.CreateTable<Personnage>();
             _database.CreateTable<Quete>();
+            Personnages = new ObservableCollection<Personnage>(GetPersonnes());
         }
         public List<Personnage> GetPersonnes()
         {
@@ -70,11 +71,6 @@ namespace WikiZeldaSS.Database
         }
 
         public ObservableCollection<Personnage> Personnages { get; set; }
-
-        public PersonnagesViewModel(DatabaseService db)
-        {
-            Personnages = new ObservableCollection<Personnage>(db.GetPersonnes());
-        }
 
     }
 }
