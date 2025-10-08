@@ -292,6 +292,7 @@ namespace WikiZeldaSS.Database
         public ObservableCollection<Objet> Objets { get; set; }
         public ObservableCollection<Quete> Quetes { get; set; }
         public ObservableCollection<Lieu> Lieux { get; set; }
+        public ObservableCollection<LieuxDetail> LieuxDetails { get; set; }
 
 
     }
