@@ -103,7 +103,7 @@ namespace WikiZeldaSS.Database
                 DescriptionCourt = "Petites quêtes annexes confiées par les habitants de Célesbourg. Chaque mission réussie donne des cristaux à échanger contre des récompenses.",
                 DescriptionLong = "",
                 Emoji = "💖",
-                Couleur = "",
+                Couleur = "#f39c12",
                 Objectif = "",
                 Recompense = ""
             });
@@ -113,7 +113,7 @@ namespace WikiZeldaSS.Database
                 DescriptionCourt = "Une quête romantique où Link doit choisir entre deux prétendants amoureux de la même personne.",
                 DescriptionLong = "",
                 Emoji = "📖",
-                Couleur = "",
+                Couleur = "#e74c3c",
                 Objectif = "",
                 Recompense = ""
             });
@@ -123,7 +123,7 @@ namespace WikiZeldaSS.Database
                 DescriptionCourt = "Au restaurant de la Citrouille perchée, Link doit travailler pour rembourser les pots cassés en servant les clients ou en transportant des citrouilles.",
                 DescriptionLong = "",
                 Emoji = "🎃",
-                Couleur = "",
+                Couleur = "#27ae60",
                 Objectif = "",
                 Recompense = ""
             });
@@ -133,7 +133,27 @@ namespace WikiZeldaSS.Database
                 DescriptionCourt = "Un mini-jeu où Link doit couper le plus de bambous possible en un coup de sabre pour gagner des récompenses.",
                 DescriptionLong = "",
                 Emoji = "🎋",
-                Couleur = "",
+                Couleur = "#87ceeb",
+                Objectif = "",
+                Recompense = ""
+            });
+            _database.Insert(new Quete
+            {
+                Nom = "Chasse aux insectes",
+                DescriptionCourt = "Une quête confiée par Terry où Link doit capturer divers insectes rares disséminés dans les régions du monde.",
+                DescriptionLong = "",
+                Emoji = "🐞",
+                Couleur = "#9b59b6",
+                Objectif = "",
+                Recompense = ""
+            });
+            _database.Insert(new Quete
+            {
+                Nom = "Harpe de la Déesse",
+                DescriptionCourt = "Quêtes musicales où Link doit jouer de la harpe pour réveiller les Dragons et ouvrir de nouveaux chemins.",
+                DescriptionLong = "",
+                Emoji = "🎶",
+                Couleur = "#3498db",
                 Objectif = "",
                 Recompense = ""
             });
