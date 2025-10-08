@@ -11,8 +11,11 @@ namespace WikiZeldaSS.Models
     {
         [PrimaryKey, AutoIncrement] public int Id { get; set; }
         public string? Nom { get; set; }
-        public string? Description { get; set; }
+        public string? DescriptionCourt { get; set; }
+        public string? DescriptionLong { get; set; }
         public string? Emoji { get; set; }
-       
+        public string? Couleur { get; set; }
+
+
     }
 }
