@@ -158,6 +158,28 @@ namespace WikiZeldaSS.Database
             return _database.Delete(item);
         }
 
+        public List<Lieu> GetLieux()
+        {
+            return _database.GetAllWithChildren<Lieu>(recursive: true)
+                .OrderBy(x => x.Nom)
+                .ToList();
+        }
+
+        public int SaveLieu(Lieu item)
+        {
+            if (item.Id != 0)
+                return _database.Update(item);
+            else
+                return _database.Insert(item);
+        }
+
+        public int DeleteLieu(Lieu item)
+        {
+            return _database.Delete(item);
+        }
+
+
+
         public ObservableCollection<Personnage> Personnages { get; set; }
         public ObservableCollection<Objet> Objets { get; set; }
         public ObservableCollection<Quete> Quetes { get; set; }
