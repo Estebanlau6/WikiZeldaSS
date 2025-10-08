@@ -17,7 +17,7 @@ namespace WikiZeldaSS.Database
         public const SQLiteOpenFlags Flags =
         // open the database in read/write mode
         SQLiteOpenFlags.ReadWrite |
-        // create the database if it doesn't exist
+        // create the database if it doesn't exist  
         SQLiteOpenFlags.Create |
         // enable multi-threaded database access
         SQLiteOpenFlags.SharedCache;
@@ -29,7 +29,8 @@ namespace WikiZeldaSS.Database
             //Création des tables
             _database.CreateTable<Personnage>();
             _database.CreateTable<Quete>();
-            Personnages = new ObservableCollection<Personnage>(GetPersonnes());
+          
+
         }
         public List<Personnage> GetPersonnes()
         {
@@ -73,4 +74,5 @@ namespace WikiZeldaSS.Database
         public ObservableCollection<Personnage> Personnages { get; set; }
 
     }
+        
 }

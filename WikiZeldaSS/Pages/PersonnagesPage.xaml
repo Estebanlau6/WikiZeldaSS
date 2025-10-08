@@ -19,98 +19,25 @@
                    Margin="0,10,0,20" />
 
             <CollectionView
-        SelectionMode="Single"
-        ItemsSource="{Binding Personnages}"
-        SelectionChangedCommand="{Binding OpenDetailPageCommand}"
-        SelectionChangedCommandParameter="{Binding Path=SelectedItem, Source={RelativeSource Self}}">
+                SelectionMode="Single"
+                ItemsSource="{Binding Personnages}">
                 <CollectionView.ItemTemplate>
                     <DataTemplate x:DataType="model:Personnage">
                         <Border BackgroundColor="#2c3e50" Padding="15" StrokeShape="RoundRectangle 10">
                             <VerticalStackLayout>
                                 <Label Text="{Binding Nom}"
-                                   FontSize="20"
-                                   FontAttributes="Bold"
-                                   TextColor="#3498db" />
-                                <Label Text="Le héros de l'aventure. Étudiant à l'Académie des Chevaliers de Célesbourg, il est choisi par l'Épée Divine pour sauver Zelda."
-                                   FontSize="14"
-                                   TextColor="White"
-                                   LineBreakMode="WordWrap" />
+                                       FontSize="20"
+                                       FontAttributes="Bold"
+                                       TextColor="#3498db" />
+                                <Label Text="{Binding Description}"
+                                       FontSize="14"
+                                       TextColor="White"
+                                       LineBreakMode="WordWrap" />
                             </VerticalStackLayout>
                         </Border>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
             </CollectionView>
-            <!-- Link -->
-            <Border BackgroundColor="#2c3e50" Padding="15" StrokeShape="RoundRectangle 10">
-                <VerticalStackLayout>
-                    <Label Text="🗡️ Linkooo"
-                           FontSize="20"
-                           FontAttributes="Bold"
-                           TextColor="#3498db" />
-                    <Label Text="Le héros de l'aventure. Étudiant à l'Académie des Chevaliers de Célesbourg, il est choisi par l'Épée Divine pour sauver Zelda."
-                           FontSize="14"
-                           TextColor="White"
-                           LineBreakMode="WordWrap" />
-                </VerticalStackLayout>
-            </Border>
-
-            <!-- Zelda -->
-            <Border BackgroundColor="#2c3e50" Padding="15" StrokeShape="RoundRectangle 10">
-                <VerticalStackLayout>
-                    <Label Text="👸 Princesse Zelda"
-                           FontSize="20"
-                           FontAttributes="Bold"
-                           TextColor="#e91e63" />
-                    <Label Text="Étudiante à l'Académie et amie d'enfance de Link. Elle est la réincarnation de la déesse Hylia."
-                           FontSize="14"
-                           TextColor="White"
-                           LineBreakMode="WordWrap" />
-                </VerticalStackLayout>
-            </Border>
-
-            <!-- Ghirahim -->
-            <Border BackgroundColor="#2c3e50" Padding="15" StrokeShape="RoundRectangle 10">
-                <VerticalStackLayout>
-                    <Label Text="👹 Ghirahim"
-                           FontSize="20"
-                           FontAttributes="Bold"
-                           TextColor="#9c27b0" />
-                    <Label Text="Le Seigneur Démon, antagoniste principal. Il cherche à ressusciter son maître Demise."
-                           FontSize="14"
-                           TextColor="White"
-                           LineBreakMode="WordWrap" />
-                </VerticalStackLayout>
-            </Border>
-
-            <!-- Fi -->
-            <Border BackgroundColor="#2c3e50" Padding="15" StrokeShape="RoundRectangle 10">
-                <VerticalStackLayout>
-                    <Label Text="⚔️ Fi"
-                           FontSize="20"
-                           FontAttributes="Bold"
-                           TextColor="#00bcd4" />
-                    <Label Text="L'esprit de l'Épée Divine qui guide Link dans sa quête."
-                           FontSize="14"
-                           TextColor="White"
-                           LineBreakMode="WordWrap" />
-                </VerticalStackLayout>
-            </Border>
-
-            <!-- Impa -->
-            <Border Background="#2c3e50" Padding="15" StrokeShape="RoundRectangle 10">
-                <VerticalStackLayout>
-                    <Label Text="🛡️ Impa"
-                           FontSize="20"
-                           FontAttributes="Bold"
-                           TextColor="#ff9800" />
-                    <Label Text="Gardienne Sheikah protectrice de Zelda à travers le temps."
-                           FontSize="14"
-                           TextColor="White"
-                           LineBreakMode="WordWrap" />
-                </VerticalStackLayout>
-            </Border>
-
         </VerticalStackLayout>
     </ScrollView>
-
 </ContentPage>
