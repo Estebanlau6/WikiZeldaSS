@@ -74,6 +74,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="Details\LieuxDetail.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Pages\LieuxPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
