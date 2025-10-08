@@ -30,7 +30,32 @@ namespace WikiZeldaSS.Database
             _database.DeleteAll<Personnage>();
             _database.CreateTable<Personnage>();
             _database.CreateTable<Quete>();
-            _database.Insert(new Personnage { Nom = "Link", Description = "Le héros principal de la série, souvent chargé de sauver la princesse Zelda et de vaincre Ganon.", Role = "Héros", Emoji = "🗡️" });
+            _database.Insert(new Personnage
+            {
+                Nom = "Link",
+                DescriptionCourt = "Le héros principal de la série, souvent chargé de sauver la princesse Zelda et de vaincre Ganon.",
+                Role = "Héros",
+                Emoji = "🗡️"
+            });
+            _database.Insert(new Personnage {
+                Nom = "Zelda",
+                DescriptionCourt = "La princesse du royaume d'Hyrule, souvent enlevée par Ganon et sauvée par Link.",
+                Role = "Princesse",
+                Emoji = "👸"
+            });
+            _database.Insert(new Personnage {
+                Nom = "Ganon",
+                DescriptionCourt = "L'antagoniste principal de la série, souvent représenté comme un puissant sorcier ou un démon.",
+                Role = "Antagoniste",
+                Emoji = "👹"
+            });
+            _database.Insert(new Personnage {
+                Nom = "Impa",
+                DescriptionCourt = "Une membre du clan Sheikah, souvent protectrice de la princesse Zelda.",
+                Role = "Protectrice",
+                Emoji = "🛡️"
+            });
+            
 
 
         }
