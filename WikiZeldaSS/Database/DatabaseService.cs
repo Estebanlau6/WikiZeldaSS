@@ -27,9 +27,11 @@ namespace WikiZeldaSS.Database
         {
             _database = new SQLiteConnection(DatabasePath, Flags);
             //Création des tables
+            _database.DeleteAll<Personnage>();
             _database.CreateTable<Personnage>();
             _database.CreateTable<Quete>();
-          
+            _database.Insert(new Personnage { Nom = "Link", Description = "Le héros principal de la série, souvent chargé de sauver la princesse Zelda et de vaincre Ganon.", Role = "Héros", Emoji = "🗡️" });
+
 
         }
         public List<Personnage> GetPersonnes()
