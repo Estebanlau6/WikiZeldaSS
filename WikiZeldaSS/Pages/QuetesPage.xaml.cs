@@ -4,9 +4,9 @@ namespace WikiZeldaSS.Pages;
 
 public partial class QuetesPage : ContentPage
 {
-	public QuetesPage(QuetesViewModel viewModel)
+	public QuetesPage()
 	{
 		InitializeComponent();
-        BindingContext = viewModel;
+        BindingContext = new QuetesViewModel(new Database.DatabaseService());
     }
 }

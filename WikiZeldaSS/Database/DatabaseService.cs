@@ -27,10 +27,10 @@ namespace WikiZeldaSS.Database
         {
             _database = new SQLiteConnection(DatabasePath, Flags);
             //Création des tables
-            //_database.DeleteAll<Quete>();
-            //_database.DeleteAll<Personnage>();
-            //_database.DeleteAll<Objet>();
-            //_database.DeleteAll<Lieu>();
+            _database.DeleteAll<Quete>();
+            _database.DeleteAll<Personnage>();
+            _database.DeleteAll<Objet>();
+            _database.DeleteAll<Lieu>();
             _database.CreateTable<Lieu>();
             _database.CreateTable<Objet>();
             _database.CreateTable<Personnage>();
@@ -96,6 +96,46 @@ namespace WikiZeldaSS.Database
                 DescriptionLong = "",
                 Emoji = "🏹",
                 Couleur = ""
+            });
+            _database.Insert(new Quete
+            {
+                Nom = "Cristaux de gratitude",
+                DescriptionCourt = "Petites quêtes annexes confiées par les habitants de Célesbourg. Chaque mission réussie donne des cristaux à échanger contre des récompenses.",
+                DescriptionLong = "",
+                Emoji = "💖",
+                Couleur = "",
+                Objectif = "",
+                Recompense = ""
+            });
+            _database.Insert(new Quete
+            {
+                Nom = "Livre d'amour de Bertie",
+                DescriptionCourt = "Une quête romantique où Link doit choisir entre deux prétendants amoureux de la même personne.",
+                DescriptionLong = "",
+                Emoji = "📖",
+                Couleur = "",
+                Objectif = "",
+                Recompense = ""
+            });
+            _database.Insert(new Quete
+            {
+                Nom = "Quête des citrouilles",
+                DescriptionCourt = "Au restaurant de la Citrouille perchée, Link doit travailler pour rembourser les pots cassés en servant les clients ou en transportant des citrouilles.",
+                DescriptionLong = "",
+                Emoji = "🎃",
+                Couleur = "",
+                Objectif = "",
+                Recompense = ""
+            });
+            _database.Insert(new Quete
+            {
+                Nom = "Défi de l'île Bambou",
+                DescriptionCourt = "Un mini-jeu où Link doit couper le plus de bambous possible en un coup de sabre pour gagner des récompenses.",
+                DescriptionLong = "",
+                Emoji = "🎋",
+                Couleur = "",
+                Objectif = "",
+                Recompense = ""
             });
 
 
