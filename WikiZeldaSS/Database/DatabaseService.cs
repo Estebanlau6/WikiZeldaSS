@@ -60,7 +60,14 @@ namespace WikiZeldaSS.Database
                 DescriptionCourt = "Une membre du clan Sheikah, souvent protectrice de la princesse Zelda.",
                 Role = "Protectrice",
                 Emoji = "🛡️"
+            }); 
+            _database.Insert(new Personnage {                 
+                Nom = "Celestrier",
+                DescriptionCourt = "Chaque habitant de Célesbourg possède son propre célestrier, qu'il appelle en sifflant et monte pour voyager dans le Ciel. On dit qu'ils sont là pour protéger les habitants de Célesbourg.",
+                Role = "Monture",
+                Emoji = "🐴"
             });
+
             _database.Insert(new Objet 
             {
                 Nom = "Épée de Légende",
