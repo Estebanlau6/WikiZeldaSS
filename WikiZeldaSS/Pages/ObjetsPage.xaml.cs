@@ -4,9 +4,9 @@ namespace WikiZeldaSS.Pages;
 
 public partial class ObjetsPage : ContentPage
 {
-    public ObjetsPage(ObjetsViewModel viewModel)
+    public ObjetsPage()
 	{
 		InitializeComponent();
-		BindingContext = viewModel;
+		BindingContext = new ObjetsViewModel(new Database.DatabaseService());
     }
 }

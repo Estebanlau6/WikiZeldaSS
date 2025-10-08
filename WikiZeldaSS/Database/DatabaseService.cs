@@ -27,10 +27,10 @@ namespace WikiZeldaSS.Database
         {
             _database = new SQLiteConnection(DatabasePath, Flags);
             //Création des tables
-            _database.DeleteAll<Quete>();
-            _database.DeleteAll<Personnage>();
-            _database.DeleteAll<Objet>();
-            _database.DeleteAll<Lieu>();
+            //_database.DeleteAll<Quete>();
+            //_database.DeleteAll<Personnage>();
+            //_database.DeleteAll<Objet>();
+            //_database.DeleteAll<Lieu>();
             _database.CreateTable<Lieu>();
             _database.CreateTable<Objet>();
             _database.CreateTable<Personnage>();
@@ -60,7 +60,36 @@ namespace WikiZeldaSS.Database
                 Role = "Protectrice",
                 Emoji = "🛡️"
             });
-            
+            _database.Insert(new Objet 
+            {
+                Nom = "Épée de Légende",
+                DescriptionCourt = "L’arme principale de Link, qui évolue au fil de l’aventure jusqu’à devenir la Master Sword.",
+                DescriptionLong = "",
+                Emoji = "🗡️",
+                Couleur = ""
+            });
+            _database.Insert(new Objet {
+                Nom = "Bouclier Hylien",
+                DescriptionCourt = "La princesse du royaume d'Hyrule, souvent enlevée par Ganon et sauvée par Link.",
+                DescriptionLong = "",
+                Emoji = "🛡️",
+                Couleur = ""
+            });
+            _database.Insert(new Objet {
+                Nom = "Scarabée",
+                DescriptionCourt = "Petit insecte mécanique télécommandé par Link. Sert à activer des mécanismes et ramasser des objets.",
+                DescriptionLong = "",
+                Emoji = "🐞",
+                Couleur = ""
+            });
+            _database.Insert(new Objet {
+                Nom = "Arc",
+                DescriptionCourt = "Permet de tirer des flèches avec précision, utile contre les ennemis volants ou éloignés.",
+                DescriptionLong = "",
+                Emoji = "🏹",
+                Couleur = ""
+            });
+
 
 
         }
@@ -102,9 +131,29 @@ namespace WikiZeldaSS.Database
         {
             return _database.Delete(item);
         }
+        public List<Objet> GetObjets()
+        {
+            return _database.GetAllWithChildren<Objet>(recursive: true)
+                .OrderBy(x => x.Nom)
+                .ToList();
+        }
+        public int SaveObjet(Objet item)
+        {
+            if (item.Id != 0)
+                return _database.Update(item);
+            else
+                return _database.Insert(item);
+        }
+
+        public int DeleteObjet(Objet item)
+        {
+            return _database.Delete(item);
+        }
 
         public ObservableCollection<Personnage> Personnages { get; set; }
+        public ObservableCollection<Objet> Objets { get; set; }
+
 
     }
-        
+
 }
