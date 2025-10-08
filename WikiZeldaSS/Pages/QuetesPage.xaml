@@ -16,8 +16,38 @@
                    TextColor="#ffd700"
                    HorizontalOptions="Center"
                    Margin="0,10,0,20" />
+            <CollectionView
+                SelectionMode="Single"
+                ItemsSource="{Binding Quetes}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="model:Quete">
+                        <Border BackgroundColor="#2c3e50" Padding="15" StrokeShape="RoundRectangle 10">
+                            <VerticalStackLayout HorizontalOptions="Start">
 
-            <!-- Quêtes de gratitude -->
+                                <!-- Emoji + Nom sur la même ligne, alignés à gauche -->
+                                <HorizontalStackLayout Spacing="10" HorizontalOptions="Start">
+                                    <Label Text="{Binding Emoji}" 
+                           FontSize="24"
+                           VerticalOptions="Center" />
+                                    <Label Text="{Binding Nom}"
+                           FontSize="20"
+                           FontAttributes="Bold"
+                           TextColor="{Binding Couleur}"
+                           VerticalOptions="Center" />
+                                </HorizontalStackLayout>
+
+                                <!-- Description en dessous -->
+                                <Label Text="{Binding DescriptionCourt}"
+                       FontSize="14"
+                       TextColor="White"
+                       LineBreakMode="WordWrap"
+                       HorizontalOptions="Start" />
+                            </VerticalStackLayout>
+                        </Border>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+            <!-- Quêtes de gratitude --><!--
             <Frame BackgroundColor="#2c3e50" CornerRadius="10" Padding="15">
                 <VerticalStackLayout>
                     <Label Text="💖 Cristaux de gratitude"
@@ -31,7 +61,7 @@
                 </VerticalStackLayout>
             </Frame>
 
-            <!-- Livre d'amour de Bertie -->
+            --><!-- Livre d'amour de Bertie --><!--
             <Frame BackgroundColor="#2c3e50" CornerRadius="10" Padding="15">
                 <VerticalStackLayout>
                     <Label Text="📖 Livre d'amour de Bertie"
@@ -45,7 +75,7 @@
                 </VerticalStackLayout>
             </Frame>
 
-            <!-- Quête des citrouilles -->
+            --><!-- Quête des citrouilles --><!--
             <Frame BackgroundColor="#2c3e50" CornerRadius="10" Padding="15">
                 <VerticalStackLayout>
                     <Label Text="🎃 Quête des citrouilles"
@@ -59,7 +89,7 @@
                 </VerticalStackLayout>
             </Frame>
 
-            <!-- Quête de l'île Bambou -->
+            --><!-- Quête de l'île Bambou --><!--
             <Frame BackgroundColor="#2c3e50" CornerRadius="10" Padding="15">
                 <VerticalStackLayout>
                     <Label Text="🎋 Défi de l'île Bambou"
@@ -73,7 +103,7 @@
                 </VerticalStackLayout>
             </Frame>
 
-            <!-- Chasse aux insectes -->
+            --><!-- Chasse aux insectes --><!--
             <Frame BackgroundColor="#2c3e50" CornerRadius="10" Padding="15">
                 <VerticalStackLayout>
                     <Label Text="🐞 Chasse aux insectes"
@@ -87,7 +117,7 @@
                 </VerticalStackLayout>
             </Frame>
 
-            <!-- Harpe de la Déesse -->
+            --><!-- Harpe de la Déesse --><!--
             <Frame BackgroundColor="#2c3e50" CornerRadius="10" Padding="15">
                 <VerticalStackLayout>
                     <Label Text="🎶 Harpe de la Déesse"
@@ -99,7 +129,7 @@
                            TextColor="White"
                            LineBreakMode="WordWrap" />
                 </VerticalStackLayout>
-            </Frame>
+            </Frame>-->
 
         </VerticalStackLayout>
     </ScrollView>
