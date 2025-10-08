@@ -77,6 +77,15 @@
 	  <MauiXaml Update="Details\LieuxDetail.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Details\ObjetsDetail.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Details\PersonnesDetail.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Details\QuetesDetail.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Pages\LieuxPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
