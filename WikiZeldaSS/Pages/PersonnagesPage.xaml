@@ -31,8 +31,8 @@
                                 <Label Text="{Binding Nom}"
                                        FontSize="20"
                                        FontAttributes="Bold"
-                                       TextColor="#3498db" />
-                                <Label Text="{Binding Description}"
+                                       TextColor="{Binding Couleur}" />
+                                <Label Text="{Binding DescriptionCourt}"
                                        FontSize="14"
                                        TextColor="White"
                                        LineBreakMode="WordWrap" />
