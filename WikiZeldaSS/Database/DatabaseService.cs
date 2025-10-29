@@ -286,14 +286,14 @@ namespace WikiZeldaSS.Database
             return _database.Delete(item);
         }
 
-        public List<LieuDetail> GetLieuxDetails()
+        public List<Lieu> GetLieuxDetails()
         {
-            return _database.GetAllWithChildren<LieuDetail>(recursive: true)
+            return _database.GetAllWithChildren<Lieu>(recursive: true)
                 .OrderBy(x => x.Nom)
                 .ToList();
         }
 
-        public int SaveLieuxDetail(LieuDetail item)
+        public int SaveLieuxDetail(Lieu item)
         {
             if (item.Id != 0)
                 return _database.Update(item);
@@ -301,7 +301,7 @@ namespace WikiZeldaSS.Database
                 return _database.Insert(item);
         }
 
-        public int DeleteLieuxDetail(LieuDetail item)
+        public int DeleteLieuxDetail(Lieu item)
         {
             return _database.Delete(item);
         }
