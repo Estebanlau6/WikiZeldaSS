@@ -19,6 +19,7 @@
             <CollectionView
                     SelectionMode="Single"
                     ItemsSource="{Binding Lieux}"
+                
                     SelectionChangedCommand="{Binding OpenDetailPageCommand}"
                     SelectionChangedCommandParameter="{Binding Path=SelectedItem, Source={RelativeSource Self}}"
                     Margin="15">
