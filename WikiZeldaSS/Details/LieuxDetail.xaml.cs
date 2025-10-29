@@ -1,12 +1,41 @@
-using WikiZeldaSS.ViewModels;
+// Dans LieuxDetail.xaml.cs
+using WikiZeldaSS.Models; // Assure-toi que ce namespace est correct
 
-namespace WikiZeldaSS.Details;
-
-public partial class LieuxPage : ContentPage
+namespace WikiZeldaSS.Pages
 {
-    public LieuxPage()
+    [QueryProperty(nameof(SelectedLieu), "SelectedLieu")]
+    public partial class LieuxDetail : ContentPage
     {
-        InitializeComponent();
-        BindingContext = new LieuxDetailViewModel(new Database.DatabaseService());
+        private Lieu _selectedLieu;
+        public Lieu SelectedLieu
+        {
+            get => _selectedLieu;
+            set
+            {
+                _selectedLieu = value;
+                // Quand l'objet arrive, on met à jour la page
+                UpdatePageData(); 
+            }
+        }
+
+        public LieuxDetail()
+        {
+            InitializeComponent();
+            BindingContext = this; 
+        }
+
+        private void UpdatePageData()
+        {
+            if (SelectedLieu != null)
+            {
+                // Par exemple, si tu as un Label nommé 'TitreLabel' en XAML
+                // TitreLabel.Text = SelectedLieu.Nom;
+                
+                // Ou mieux, si ton XAML binde sur SelectedLieu
+                // (ex: <Label Text="{Binding SelectedLieu.Nom}" />)
+                // alors tu n'as presque rien à faire ici.
+                OnPropertyChanged(nameof(SelectedLieu));
+            }
+        }
     }
 }

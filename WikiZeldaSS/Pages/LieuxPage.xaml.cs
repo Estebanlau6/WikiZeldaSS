@@ -13,7 +13,7 @@ public partial class LieuxPage : ContentPage
 
 private async void OnLieuSelectionChanged(object sender, SelectionChangedEventArgs e)
     {
-        if (e.CurrentSelection.FirstOrDefault() is LieuDetail lieu)
+        if (e.CurrentSelection.FirstOrDefault() is Lieu lieu)
         {
            // await Navigation.PushAsync(new LieuDetail(lieu));
 
