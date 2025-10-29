@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
@@ -9,12 +10,13 @@ using WikiZeldaSS.Models;
 
 namespace WikiZeldaSS.ViewModels;
 
-public class ObjetsViewModel
+public partial class ObjetsViewModel : ObservableObject
 {
 
     private readonly DatabaseService _databaseService;
 
-    public ObservableCollection<Objet> Objets { get; set; }
+    [ObservableProperty]
+    public ObservableCollection<Objet> _objets;
 
     public ObjetsViewModel(DatabaseService databaseService)
     {

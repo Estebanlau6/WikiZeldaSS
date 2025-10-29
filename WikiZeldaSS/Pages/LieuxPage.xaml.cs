@@ -1,20 +1,21 @@
+using WikiZeldaSS.Models;
 using WikiZeldaSS.ViewModels;
 
 namespace WikiZeldaSS.Pages;
 
 public partial class LieuxPage : ContentPage
 {
-    public LieuxPage()
+    public LieuxPage(LieuxViewModel viewModel)
     {
         InitializeComponent();
-        BindingContext = new LieuxViewModel(new Database.DatabaseService());
+        BindingContext = viewModel;
     }
 
 private async void OnLieuSelectionChanged(object sender, SelectionChangedEventArgs e)
     {
-        if (e.CurrentSelection.FirstOrDefault() is Lieux lieu)
+        if (e.CurrentSelection.FirstOrDefault() is LieuDetail lieu)
         {
-            await Navigation.PushAsync(new LieuDetail(lieu));
+           // await Navigation.PushAsync(new LieuDetail(lieu));
 
             ((CollectionView)sender).SelectedItem = null;
         }

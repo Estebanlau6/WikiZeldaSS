@@ -19,12 +19,9 @@
             <CollectionView
                     SelectionMode="Single"
                     ItemsSource="{Binding Lieux}"
-                    SelectionChanged="OnLieuSelectionChanged"
+                    SelectionChangedCommand="{Binding OpenDetailPageCommand}"
+                    SelectionChangedCommandParameter="{Binding Path=SelectedItem, Source={RelativeSource Self}}"
                     Margin="15">
-                <CollectionView.ItemsLayout>
-                    <VerticalLinearItemsLayout ItemSpacing="15" />
-                </CollectionView.ItemsLayout>
-
                 <CollectionView.ItemTemplate>
                     <DataTemplate x:DataType="model:Lieu">
                         <Border

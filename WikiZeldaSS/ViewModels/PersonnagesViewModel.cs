@@ -1,14 +1,16 @@
-﻿using System.Collections.ObjectModel;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
+using System.Collections.ObjectModel;
 using WikiZeldaSS.Database;
 using WikiZeldaSS.Models;
 
 namespace WikiZeldaSS.ViewModels;
 
-public class PersonnagesViewModel
+public partial class PersonnagesViewModel : ObservableObject
 {
     private readonly DatabaseService _databaseService;
 
-    public ObservableCollection<Personnage> Personnages { get; set; }
+    [ObservableProperty]
+    public ObservableCollection<Personnage> _personnages;
 
     public PersonnagesViewModel(DatabaseService databaseService)
     {

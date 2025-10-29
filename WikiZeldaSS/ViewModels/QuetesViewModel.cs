@@ -1,15 +1,17 @@
-﻿using System.Collections.ObjectModel;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
+using System.Collections.ObjectModel;
 using WikiZeldaSS.Database;
 using WikiZeldaSS.Models;
 
 
 namespace WikiZeldaSS.ViewModels;
 
-public class QuetesViewModel
+public partial class QuetesViewModel : ObservableObject
 {
     private readonly DatabaseService _databaseService;
 
-    public ObservableCollection<Quete> Quetes { get; set; }
+    [ObservableProperty]
+    public ObservableCollection<Quete> _quetes;
 
     public QuetesViewModel(DatabaseService databaseService)
     {
