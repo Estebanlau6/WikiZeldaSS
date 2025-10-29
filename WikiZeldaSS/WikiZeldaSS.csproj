@@ -74,6 +74,12 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiImage Update="Resources\Images\cristaux_de_gratitude.jpg">
+	    <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+	  </MauiImage>
+	</ItemGroup>
+
+	<ItemGroup>
 	  <MauiXaml Update="Details\LieuxDetail.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

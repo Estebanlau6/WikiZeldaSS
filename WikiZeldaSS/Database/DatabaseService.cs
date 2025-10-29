@@ -105,11 +105,12 @@ namespace WikiZeldaSS.Database
             {
                 Nom = "Cristaux de gratitude",
                 DescriptionCourt = "Petites quêtes annexes confiées par les habitants de Célesbourg. Chaque mission réussie donne des cristaux à échanger contre des récompenses.",
-                DescriptionLong = "",
+                DescriptionLong = "Les Cristaux de gratitude sont des objets spéciaux que Link obtient en aidant les habitants de Célesbourg et des environs. Ces quêtes annexes consistent à résoudre les problèmes des habitants, de jour comme de nuit. Une fois les quêtes accomplies, Link reçoit un ou plusieurs cristaux qu’il peut rapporter à Morcego (le démon vivant sous Célesbourg). En les échangeant, Morcego se rapproche de son rêve : devenir humain, et Link reçoit de précieuses récompenses.",
                 Emoji = "💖",
                 Couleur = "#f39c12",
-                Objectif = "",
-                Recompense = ""
+                Objectif = "Aider les habitants de Célesbourg et des environs pour obtenir tous les 80 Cristaux de gratitude.",
+                Recompense = "Différentes récompenses offertes par Morcego : Portefeuille moyen (5 cristaux), Grand portefeuille (10), Portefeuille géant (30), 300 rubis (30), Rubis d'argent (40), Rubis d'or (70), et le Cristal de démon (80).",
+                Image = "cristaux_de_gratitude.jpg"
             });
             _database.Insert(new Quete
             {
@@ -119,7 +120,8 @@ namespace WikiZeldaSS.Database
                 Emoji = "📖",
                 Couleur = "#e74c3c",
                 Objectif = "",
-                Recompense = ""
+                Recompense = "",
+                Image = ""
             });
             _database.Insert(new Quete
             {
@@ -129,7 +131,8 @@ namespace WikiZeldaSS.Database
                 Emoji = "🎃",
                 Couleur = "#27ae60",
                 Objectif = "",
-                Recompense = ""
+                Recompense = "",
+                Image = ""
             });
             _database.Insert(new Quete
             {
@@ -139,7 +142,8 @@ namespace WikiZeldaSS.Database
                 Emoji = "🎋",
                 Couleur = "#87ceeb",
                 Objectif = "",
-                Recompense = ""
+                Recompense = "",
+                Image = ""
             });
             _database.Insert(new Quete
             {
@@ -149,7 +153,8 @@ namespace WikiZeldaSS.Database
                 Emoji = "🐞",
                 Couleur = "#9b59b6",
                 Objectif = "",
-                Recompense = ""
+                Recompense = "",
+                Image = ""
             });
             _database.Insert(new Quete
             {
@@ -159,7 +164,8 @@ namespace WikiZeldaSS.Database
                 Emoji = "🎶",
                 Couleur = "#3498db",
                 Objectif = "",
-                Recompense = ""
+                Recompense = "",
+                Image = ""
             });
 
             _database.Insert(new Lieu {

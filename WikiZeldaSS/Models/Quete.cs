@@ -17,6 +17,7 @@ namespace WikiZeldaSS.Models
         public string? Recompense { get; set; }
         public string? Emoji { get; set; }
         public string? Couleur { get; set; }
+        public string? Image { get; set; }
 
     }
 }
