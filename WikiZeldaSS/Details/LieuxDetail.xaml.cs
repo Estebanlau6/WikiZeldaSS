@@ -24,6 +24,11 @@ namespace WikiZeldaSS.Pages
             BindingContext = this; 
         }
 
+        private void InitializeComponent()
+        {
+            throw new NotImplementedException();
+        }
+
         private void UpdatePageData()
         {
             if (SelectedLieu != null)
