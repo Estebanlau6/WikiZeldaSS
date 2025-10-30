@@ -116,55 +116,55 @@ namespace WikiZeldaSS.Database
             {
                 Nom = "Livre d'amour de Bertie",
                 DescriptionCourt = "Une quête romantique où Link doit choisir entre deux prétendants amoureux de la même personne.",
-                DescriptionLong = "",
+                DescriptionLong = "Cawlin, l’un des apprentis chevaliers de Célesbourg, est amoureux de Karane, une élève de l’Académie. Il demande à Link de lui remettre une lettre d’amour. Cependant, un autre prétendant, Peater, est lui aussi épris de Karane. Link doit choisir à qui remettre la lettre. Selon le choix, la quête prend une tournure différente : Karane peut tomber amoureuse de Peater, ou Cawlin finit effrayé par un fantôme s’il ne reçoit pas de réponse. Une quête pleine d’humour et de dilemmes !",
                 Emoji = "📖",
                 Couleur = "#e74c3c",
-                Objectif = "",
-                Recompense = "",
+                Objectif = "Remettre la lettre de Cawlin à Karane ou la donner à Peater, et assumer les conséquences du choix.",
+                Recompense = "5 Cristaux de gratitude offerts par Peater si la quête est terminée avec succès.",
                 Image = ""
             });
             _database.Insert(new Quete
             {
                 Nom = "Quête des citrouilles",
                 DescriptionCourt = "Au restaurant de la Citrouille perchée, Link doit travailler pour rembourser les pots cassés en servant les clients ou en transportant des citrouilles.",
-                DescriptionLong = "",
+                DescriptionLong = "Lors de sa visite à la Citrouille perchée, Link casse accidentellement un énorme chandelier, provoquant la colère du propriétaire, Pumm. Pour rembourser les dégâts, Link doit effectuer plusieurs petits boulots : transporter des citrouilles, servir les clients ou jouer de la harpe. En accomplissant toutes les tâches, Pumm finit par lui confier une mission spéciale liée à la Citrouille céleste.",
                 Emoji = "🎃",
                 Couleur = "#27ae60",
-                Objectif = "",
-                Recompense = "",
+                Objectif = "Aider le propriétaire Pumm de la Citrouille perchée en accomplissant ses tâches jusqu’à remboursement complet des dégâts.",
+                Recompense = "Cristaux de gratitude, accès à la mission de la Citrouille céleste et reconnaissance de Pumm.",
                 Image = ""
             });
             _database.Insert(new Quete
             {
                 Nom = "Défi de l'île Bambou",
                 DescriptionCourt = "Un mini-jeu où Link doit couper le plus de bambous possible en un coup de sabre pour gagner des récompenses.",
-                DescriptionLong = "",
+                DescriptionLong = "Sur l'île Bambou, Peater propose à Link de tester son adresse à l'épée. Le principe est simple : trancher un bambou géant autant de fois que possible avant qu’il ne tombe. Plus le nombre de coupes est élevé, plus la récompense est importante. C’est un excellent moyen de perfectionner les coups d'épée et de gagner des rubis ou des cristaux.",
                 Emoji = "🎋",
                 Couleur = "#87ceeb",
-                Objectif = "",
-                Recompense = "",
+                Objectif = "Obtenir le meilleur score possible en tranchant le bambou plusieurs fois d’affilée.",
+                Recompense = "Cristaux de gratitude et rubis selon le score obtenu.",
                 Image = ""
             });
             _database.Insert(new Quete
             {
                 Nom = "Chasse aux insectes",
                 DescriptionCourt = "Une quête confiée par Terry où Link doit capturer divers insectes rares disséminés dans les régions du monde.",
-                DescriptionLong = "",
+                DescriptionLong = "Terry, le marchand volant, demande à Link de l’aider à compléter sa collection d’insectes rares. À l’aide du filet, Link doit parcourir les différentes régions de Skyloft et des Terres Inférieures pour attraper chaque espèce. Certains insectes apparaissent seulement à des moments précis ou dans des lieux isolés, ce qui rend la quête longue mais gratifiante.",
                 Emoji = "🐞",
                 Couleur = "#9b59b6",
-                Objectif = "",
-                Recompense = "",
+                Objectif = "Attraper toutes les espèces d’insectes et les rapporter à Terry pour compléter sa collection.",
+                Recompense = "Rubis, cristaux de gratitude et améliorations de potions grâce aux insectes capturés.",
                 Image = ""
             });
             _database.Insert(new Quete
             {
                 Nom = "Harpe de la Déesse",
                 DescriptionCourt = "Quêtes musicales où Link doit jouer de la harpe pour réveiller les Dragons et ouvrir de nouveaux chemins.",
-                DescriptionLong = "",
+                DescriptionLong = "Link reçoit la Harpe de la Déesse de Zelda. En voyageant à travers les terres, il doit jouer des mélodies sacrées à différents endroits pour invoquer les Dragons protecteurs et activer les symboles de la Déesse. Chaque mélodie ouvre un nouveau chemin ou révèle un passage secret, rapprochant Link de son destin.",
                 Emoji = "🎶",
                 Couleur = "#3498db",
-                Objectif = "",
-                Recompense = "",
+                Objectif = "Utiliser la Harpe de la Déesse pour réveiller les Dragons et progresser dans la quête principale.",
+                Recompense = "Avancée dans la quête principale, activation de nouvelles zones et révélation des symboles sacrés.",
                 Image = ""
             });
 
