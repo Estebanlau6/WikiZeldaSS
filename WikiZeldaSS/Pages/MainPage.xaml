@@ -1,73 +1,51 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage x:Class="WikiZeldaSS.Pages.MainPage"
-             xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:vm="clr-namespace:WikiZeldaSS.ViewModels"
-             Title="Wiki Zelda Skyward Sword"
-             BackgroundColor="#1a1a2e"
-             x:DataType="vm:MainViewModel">
-
+             x:Class="WikiZeldaSS.Pages.MainPage"
+             Title="Accueil"
+             BackgroundColor="#1a1a2e">
 
     <ScrollView>
-        <VerticalStackLayout Spacing="20" Padding="30">
+        <VerticalStackLayout Padding="20" Spacing="20" HorizontalOptions="Center">
 
-            <!-- Titre principal -->
-            <Label Text="Wiki Zelda"
-                   FontSize="36"
+            <!-- Titre -->
+            <Label Text="Wiki Zelda Skyward Sword"
+                   FontSize="32"
                    FontAttributes="Bold"
                    TextColor="#ffd700"
-                   HorizontalOptions="Center"
-                   Margin="0,20,0,10" />
+                   HorizontalOptions="Center" />
 
-            <Label Text="Skyward Sword"
-                   FontSize="24"
-                   FontAttributes="Italic"
-                   TextColor="#87ceeb"
-                   HorizontalOptions="Center"
-                   Margin="0,0,0,30" />
+            <!-- Image principale -->
+            <Image Source="link_banner.png"
+                   Aspect="AspectFit"
+                   HeightRequest="200"
+                   WidthRequest="300" />
 
-            <!-- Description -->
-            <Label Text="Découvrez l'univers de Zelda Skyward Sword : personnages, objets, lieux et quêtes vous attendent !"
+            <!-- Texte de bienvenue -->
+            <Label Text="Bienvenue sur le Wiki Zelda Skyward Sword ! Explorez les quêtes, lieux, objets et personnages pour tout savoir sur Hyrule."
                    FontSize="16"
                    TextColor="White"
                    HorizontalOptions="Center"
                    HorizontalTextAlignment="Center"
-                   Margin="0,0,0,30" />
+                   LineBreakMode="WordWrap" />
 
-            <!-- Boutons de navigation -->
-            <Button Text="🧙‍♂️ Personnages"
-                    FontSize="18"
-                    BackgroundColor="#4a90e2"
-                    TextColor="White"
-                    CornerRadius="10"
-                    HeightRequest="50"
-                    Clicked="OnPersonnagesClicked" />
+            <!-- Boutons pour naviguer -->
+            <Grid ColumnSpacing="10" RowSpacing="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
 
-            <Button Text="⚔️ Objets"
-                    FontSize="18"
-                    BackgroundColor="#e74c3c"
-                    TextColor="White"
-                    CornerRadius="10"
-                    HeightRequest="50"
-                    Clicked="OnObjetsClicked" />
-
-            <Button Text="🏔️ Lieux"
-                    FontSize="18"
-                    BackgroundColor="#27ae60"
-                    TextColor="White"
-                    CornerRadius="10"
-                    HeightRequest="50"
-                    Clicked="OnLieuxClicked" />
-
-            <Button Text="📜 Quêtes"
-                    FontSize="18"
-                    BackgroundColor="#f39c12"
-                    TextColor="White"
-                    CornerRadius="10"
-                    HeightRequest="50"
-                    Clicked="OnQuetesClicked" />
+                <Button Text="Quêtes" Grid.Row="0" Grid.Column="0" BackgroundColor="#e67e22" TextColor="White" Clicked="OnQuetesClicked"/>
+                <Button Text="Lieux" Grid.Row="0" Grid.Column="1" BackgroundColor="#27ae60" TextColor="White" Clicked="OnLieuxClicked"/>
+                <Button Text="Objets" Grid.Row="1" Grid.Column="0" BackgroundColor="#3498db" TextColor="White" Clicked="OnObjetsClicked"/>
+                <Button Text="Personnages" Grid.Row="1" Grid.Column="1" BackgroundColor="#9b59b6" TextColor="White" Clicked="OnPersonnagesClicked"/>
+            </Grid>
 
         </VerticalStackLayout>
     </ScrollView>
-
 </ContentPage>
