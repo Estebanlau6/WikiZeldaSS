@@ -186,36 +186,44 @@ namespace WikiZeldaSS.Database
             _database.Insert(new Lieu {
                 Nom = "Forêt de Firone",
                 DescriptionCourt = "Une vaste forêt mystérieuse, souvent le point de départ des aventures de Link.",
-                DescriptionLong = "",
+                DescriptionLong = "La Forêt de Firone est dense et magique, remplie de créatures étranges et de secrets cachés. Les aventuriers doivent faire attention aux embuscades et aux énigmes naturelles qui s'y trouvent.",
                 Region = "Hyrule",
                 Emoji = "🌲",
-                Couleur = "#27ae60"
+                Couleur = "#27ae60",
+                Importance = "Point de départ des aventures",
+                Image = ""
             });
 
             _database.Insert(new Lieu {
                 Nom = "Volcan d'Ordinn",
                 DescriptionCourt = "Une montagne volcanique dangereuse, abritant des ennemis puissants et des trésors cachés.",
-                DescriptionLong = "",
+                DescriptionLong = "Le Volcan d'Ordinn est un lieu ardent où la lave et les créatures de feu sont omniprésentes. Les aventuriers doivent être bien équipés pour survivre et trouver les trésors légendaires.",
                 Region = "Hyrule",
                 Emoji = "⛰️",
-                Couleur = "#e74c3c"
+                Couleur = "#e74c3c",
+                Importance = "Zone de haut niveau",
+                Image = ""
             });
             _database.Insert(new Lieu {
-                Nom = "Desert de Lanele",
+                Nom = "Désert de Lanele",
                 DescriptionCourt = "Un vaste désert aride, rempli de ruines anciennes et de créatures hostiles.",
-                DescriptionLong = "",
+                DescriptionLong = "Le Désert de Lanele est une étendue brûlante où le sable et les vents tourbillonnants mettent à l'épreuve la résistance des voyageurs. On y trouve des temples enfouis et des trésors anciens.",
                 Region = "Hyrule",
                 Emoji = "🏜️",
-                Couleur = "#f39c12"
+                Couleur = "#f39c12",
+                Importance = "Exploration et énigmes",
+                Image = ""
             });
 
-            _database.Insert(new Lieu { 
+            _database.Insert(new Lieu {
                 Nom = "Temple du Temps",
                 DescriptionCourt = "Un lieu sacré où le temps peut être manipulé, souvent lié à la légende de la Master Sword.",
-                DescriptionLong = "",
+                DescriptionLong = "Le Temple du Temps est un lieu emblématique, chargé d'histoire et de magie. Les aventuriers peuvent y apprendre des secrets anciens et trouver des reliques légendaires.",
                 Region = "Hyrule",
                 Emoji = "⏳",
-                Couleur = "#9b59b6"
+                Couleur = "#9b59b6",
+                Importance = "Clé de la légende",
+                Image = ""
             });
 
         }
