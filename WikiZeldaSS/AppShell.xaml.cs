@@ -8,7 +8,7 @@ namespace WikiZeldaSS
         public AppShell()
         {
             InitializeComponent();
-            Routing.RegisterRoute("LieuDetail", typeof(LieuxPage));
+            Routing.RegisterRoute("PersonnagesDetailPage", typeof(PersonnesDetail));
             Routing.RegisterRoute("LieuxDetailPage", typeof(LieuxDetail));
             Routing.RegisterRoute("ObjetsDetailPage", typeof(ObjetsDetail));
             Routing.RegisterRoute("QueteDetailPage", typeof(QuetesDetail));

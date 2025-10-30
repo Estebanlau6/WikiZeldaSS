@@ -1,11 +1,21 @@
 using WikiZeldaSS.Models;
 namespace WikiZeldaSS.Details;
 
+[QueryProperty(nameof(Objet), "Objet")]
 public partial class ObjetsDetail : ContentPage
 {
-	public ObjetsDetail(Objet objet)
+    private Objet _objet;
+    public Objet Objet
+    {
+        get => _objet;
+        set
+        {
+            _objet = value;
+            BindingContext = _objet; 
+        }
+    }
+    public ObjetsDetail()
 	{
 		InitializeComponent();
-		BindingContext = objet;
     }
 }

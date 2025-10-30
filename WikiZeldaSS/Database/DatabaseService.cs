@@ -39,37 +39,52 @@ namespace WikiZeldaSS.Database
             {
                 Nom = "Link",
                 DescriptionCourt = "Le héros principal de la série, souvent chargé de sauver la princesse Zelda et de vaincre Ganon.",
+                DescriptionLong = "Link est courageux et déterminé. Il parcourt Hyrule pour protéger le royaume et accomplir des quêtes légendaires. Il manie l'épée et le bouclier avec maîtrise, et son cœur pur lui permet de triompher des ténèbres.",
                 Role = "Héros",
-                Emoji = "🗡️" ,
-                Couleur = "#00FF00"
+                Emoji = "🗡️",
+                Couleur = "#00FF00",
+                Importance = "Principal",
+                Image = ""
             });
             _database.Insert(new Personnage {
                 Nom = "Zelda",
                 DescriptionCourt = "La princesse du royaume d'Hyrule, souvent enlevée par Ganon et sauvée par Link.",
+                DescriptionLong = "Zelda est intelligente et sage, possédant souvent des pouvoirs magiques liés à la Triforce. Elle guide Link et joue un rôle central dans la lutte contre les forces du mal.",
                 Role = "Princesse",
                 Emoji = "👸",
-                Couleur = "#FFD700"
+                Couleur = "#FFD700",
+                Importance = "Clé de l'histoire",
+                Image = ""
             });
             _database.Insert(new Personnage {
                 Nom = "Ganon",
                 DescriptionCourt = "L'antagoniste principal de la série, souvent représenté comme un puissant sorcier ou un démon.",
+                DescriptionLong = "Ganon est l'ennemi juré de Link et Zelda. Maître de la magie noire, il cherche à conquérir Hyrule et à s'emparer de la Triforce. Son pouvoir et sa ruse en font un adversaire redoutable.",
                 Role = "Antagoniste",
                 Emoji = "👹",
-                Couleur = "#FF0000"
+                Couleur = "#FF0000",
+                Importance = "Principal antagoniste",
+                Image = ""
             });
             _database.Insert(new Personnage {
                 Nom = "Impa",
                 DescriptionCourt = "Une membre du clan Sheikah, souvent protectrice de la princesse Zelda.",
+                DescriptionLong = "Impa est une guerrière loyale et sage, veillant sur la princesse Zelda depuis son enfance. Elle maîtrise de nombreuses techniques de combat et possède des connaissances secrètes du clan Sheikah.",
                 Role = "Protectrice",
                 Emoji = "🛡️",
-                Couleur = "#0000FF"
+                Couleur = "#0000FF",
+                Importance = "Secondaire",
+                Image = ""
             }); 
-            _database.Insert(new Personnage {                 
+            _database.Insert(new Personnage {
                 Nom = "Celestrier",
-                DescriptionCourt = "Chaque habitant de Célesbourg possède son propre célestrier, qu'il appelle en sifflant et monte pour voyager dans le Ciel. On dit qu'ils sont là pour protéger les habitants de Célesbourg.",
+                DescriptionCourt = "Chaque habitant de Célesbourg possède son propre célestrier, qu'il appelle en sifflant et monte pour voyager dans le Ciel.",
+                DescriptionLong = "Les célestriers sont des montures volantes rapides et intelligentes, permettant de voyager dans le Ciel. Ils sont fidèles à leur cavalier et jouent un rôle essentiel dans le quotidien de Célesbourg.",
                 Role = "Monture",
-                Emoji = "🐴",
-                Couleur = "#A52A2A"
+                Emoji = "🦅",
+                Couleur = "#A52A2A",
+                Importance = "Secondaire",
+                Image = ""
             });
 
             _database.Insert(new Objet 
@@ -85,24 +100,33 @@ namespace WikiZeldaSS.Database
             });
             _database.Insert(new Objet {
                 Nom = "Bouclier Hylien",
-                DescriptionCourt = "La princesse du royaume d'Hyrule, souvent enlevée par Ganon et sauvée par Link.",
-                DescriptionLong = "",
+                DescriptionCourt = "Le bouclier emblématique de Link pour se protéger des attaques.",
+                DescriptionLong = "Le Bouclier Hylien est robuste et résistant aux attaques magiques et physiques. Il est indispensable pour affronter les ennemis puissants et protéger Link lors de ses aventures.",
                 Emoji = "🛡️",
-                Couleur = "#0000FF"
+                Couleur = "#0000FF",
+                Type = "Bouclier",
+                Importance = "Indispensable",
+                Image = ""
             });
             _database.Insert(new Objet {
                 Nom = "Scarabée",
                 DescriptionCourt = "Petit insecte mécanique télécommandé par Link. Sert à activer des mécanismes et ramasser des objets.",
-                DescriptionLong = "",
+                DescriptionLong = "Le Scarabée est un gadget mécanique permettant d'activer des interrupteurs à distance, de récupérer des objets dans des zones difficiles d'accès et de résoudre des énigmes complexes.",
                 Emoji = "🐞",
-                Couleur = "#9b59b6"
+                Couleur = "#9b59b6",
+                Type = "Gadget",
+                Importance = "Très utile",
+                Image = ""
             });
             _database.Insert(new Objet {
                 Nom = "Arc",
                 DescriptionCourt = "Permet de tirer des flèches avec précision, utile contre les ennemis volants ou éloignés.",
-                DescriptionLong = "",
+                DescriptionLong = "L'Arc est une arme à distance qui permet de toucher des ennemis depuis la sécurité. Il peut être amélioré avec différents types de flèches et joue un rôle crucial dans les combats stratégiques.",
                 Emoji = "🏹",
-                Couleur = "#8e44ad"
+                Couleur = "#8e44ad",
+                Type = "Arme",
+                Importance = "Très utile",
+                Image = ""
             });
             _database.Insert(new Quete
             {
