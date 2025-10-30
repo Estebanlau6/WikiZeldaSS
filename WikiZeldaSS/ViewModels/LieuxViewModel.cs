@@ -25,11 +25,15 @@ public partial class LieuxViewModel : ObservableObject
     }
 
     [RelayCommand]
-    private void OpenDetailPage(Lieu lieu)
+    private async Task OpenDetailPage(Lieu lieu)
     {
-        Shell.Current.GoToAsync("LieuDetail", true, new Dictionary<string, object>
-        {
-            { "Lieu", lieu }
-        });
+        if (lieu == null)
+            return;
+
+        await Shell.Current.GoToAsync("LieuxDetailPage", true, new Dictionary<string, object>
+    {
+        { "Lieu", lieu }
+    });
     }
+
 }

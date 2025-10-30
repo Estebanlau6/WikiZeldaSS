@@ -8,6 +8,10 @@ namespace WikiZeldaSS
         {
             InitializeComponent();
             Routing.RegisterRoute("LieuDetail", typeof(LieuxPage));
+            Routing.RegisterRoute("LieuxDetailPage", typeof(Details.LieuxDetail));
+            Routing.RegisterRoute("ObjetsDetailPage", typeof(Details.ObjetsDetail));
+
+
         }
     }
 }

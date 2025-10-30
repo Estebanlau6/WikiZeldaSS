@@ -1,12 +1,31 @@
-<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:model="clr-namespace:WikiZeldaSS.Models"
              x:Class="WikiZeldaSS.Details.ObjetsDetail"
-             Title="ObjetsDetail">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+             Title="{Binding Nom}"
+             BackgroundColor="#1a1a2e">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="20">
+
+            <Label Text="{Binding Emoji}" FontSize="48" HorizontalOptions="Center" />
+
+            <Label Text="{Binding Nom}" FontSize="28" FontAttributes="Bold" TextColor="{Binding Couleur}" HorizontalOptions="Center" />
+
+            <BoxView HeightRequest="2" Color="#ffd700" />
+
+            <Border Stroke="#ffd700" StrokeThickness="2" StrokeShape="RoundRectangle 15" BackgroundColor="#0d1321" Padding="0">
+                <Image Source="{Binding Image}" Aspect="AspectFill" HeightRequest="200" WidthRequest="300" />
+            </Border>
+
+            <Label Text="{Binding DescriptionLong}" FontSize="16" TextColor="White" LineBreakMode="WordWrap" />
+
+            <Label Text="🔹 Type" FontSize="20" FontAttributes="Bold" TextColor="#ffd700" Margin="0,10,0,0"/>
+            <Label Text="{Binding Type}" FontSize="16" TextColor="White" LineBreakMode="WordWrap" />
+
+            <Label Text="🏆 Importance" FontSize="20" FontAttributes="Bold" TextColor="#ffd700" Margin="0,10,0,0"/>
+            <Label Text="{Binding Importance}" FontSize="16" TextColor="White" LineBreakMode="WordWrap" />
+
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>

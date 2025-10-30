@@ -1,28 +1,45 @@
-<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="WikiZeldaSS.Details.LieuxPage"
-             Title="{Binding Nom}">
+             xmlns:model="clr-namespace:WikiZeldaSS.Models"
+             x:Class="WikiZeldaSS.Details.LieuxDetail"
+             Title="{Binding Nom}"
+             BackgroundColor="#1a1a2e">
 
-    <ScrollView Padding="20">
-        <VerticalStackLayout Spacing="15">
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="20">
 
+            <!-- Emoji -->
             <Label Text="{Binding Emoji}" 
-                   FontSize="48" 
+                   FontSize="48"
                    HorizontalOptions="Center" />
 
+            <!-- Nom du lieu -->
             <Label Text="{Binding Nom}"
                    FontSize="28"
                    FontAttributes="Bold"
                    TextColor="{Binding Couleur}"
                    HorizontalOptions="Center" />
 
-            <BoxView HeightRequest="2" Color="#ccc" />
+            <BoxView HeightRequest="2" Color="#ffd700" />
 
-            <Label Text="{Binding DescriptionLongue}"
+            <!-- Image -->
+            <Border Stroke="#ffd700"
+                    StrokeThickness="2"
+                    StrokeShape="RoundRectangle 15"
+                    BackgroundColor="#0d1321"
+                    Padding="0">
+                <Image Source="{Binding Image}"
+                       Aspect="AspectFill"
+                       HeightRequest="200"
+                       WidthRequest="300" />
+            </Border>
+
+            <!-- Description longue -->
+            <Label Text="{Binding DescriptionLong}"
                    FontSize="16"
                    TextColor="White"
                    LineBreakMode="WordWrap" />
+
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

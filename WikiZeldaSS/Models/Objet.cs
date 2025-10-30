@@ -15,6 +15,9 @@ namespace WikiZeldaSS.Models
         public string? DescriptionLong { get; set; }
         public string? Emoji { get; set; }
         public string? Couleur { get; set; }
+        public string? Type { get; set; }
+        public string? Image { get; set; }
+        public string? Importance { get; set; }
 
 
     }

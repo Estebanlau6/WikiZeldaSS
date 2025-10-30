@@ -1,5 +1,6 @@
 using WikiZeldaSS.Models;
 using WikiZeldaSS.ViewModels;
+using WikiZeldaSS.Details;
 
 namespace WikiZeldaSS.Pages;
 
@@ -11,13 +12,4 @@ public partial class LieuxPage : ContentPage
         BindingContext = viewModel;
     }
 
-private async void OnLieuSelectionChanged(object sender, SelectionChangedEventArgs e)
-    {
-        if (e.CurrentSelection.FirstOrDefault() is Lieu lieu)
-        {
-           // await Navigation.PushAsync(new LieuDetail(lieu));
-
-            ((CollectionView)sender).SelectedItem = null;
-        }
-    }
 }

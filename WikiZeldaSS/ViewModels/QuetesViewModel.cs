@@ -1,5 +1,6 @@
-﻿using CommunityToolkit.Mvvm.ComponentModel;
-using System.Collections.ObjectModel;
+﻿using System.Collections.ObjectModel;
+using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
 using WikiZeldaSS.Database;
 using WikiZeldaSS.Models;
 
@@ -18,4 +19,16 @@ public partial class QuetesViewModel : ObservableObject
         _databaseService = databaseService;
         Quetes = new ObservableCollection<Quete>(_databaseService.GetQuetes());
     }
+    [RelayCommand]
+    private async Task OpenDetailPage(Quete quete)
+    {
+        if (quete == null)
+            return;
+
+        await Shell.Current.GoToAsync("QueteDetailPage", true, new Dictionary<string, object>
+    {
+        { "Quete", quete }
+    });
+    }
+
 }

@@ -16,7 +16,10 @@ namespace WikiZeldaSS.Models
         public string? Region { get; set; }
         public string? Emoji { get; set; }
         public string? Couleur { get; set; }
+        public string? Image { get; set; }
+        public string? Importance { get; set; } 
 
-        
+
+
     }
 }

@@ -1,5 +1,5 @@
 using WikiZeldaSS.ViewModels;
-
+using WikiZeldaSS.Database;
 namespace WikiZeldaSS.Pages;
 
 public partial class ObjetsPage : ContentPage
@@ -8,5 +8,6 @@ public partial class ObjetsPage : ContentPage
 	{
 		InitializeComponent();
 		BindingContext = viewModel;
+        //BindingContext = new ObjetsViewModel(new Database.DatabaseService());
     }
 }

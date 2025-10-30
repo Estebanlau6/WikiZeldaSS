@@ -76,9 +76,12 @@ namespace WikiZeldaSS.Database
             {
                 Nom = "Épée de Légende",
                 DescriptionCourt = "L’arme principale de Link, qui évolue au fil de l’aventure jusqu’à devenir la Master Sword.",
-                DescriptionLong = "",
+                DescriptionLong = "L’Épée de Légende est l’arme légendaire de Link, capable de repousser les forces du mal. Elle doit être purifiée et améliorée au cours de l’aventure pour atteindre sa forme finale, la Master Sword.",
                 Emoji = "🗡️",
-                Couleur = "#00FF00"
+                Couleur = "#00FF00",
+                Type = "Arme",
+                Importance = "Clé de l’aventure",
+                Image = ""
             });
             _database.Insert(new Objet {
                 Nom = "Bouclier Hylien",
@@ -171,10 +174,12 @@ namespace WikiZeldaSS.Database
             _database.Insert(new Lieu {
                 Nom = "Célesbourg",
                 DescriptionCourt = "Un village flottant dans le ciel, habité par des humains et des célestriers.",
-                DescriptionLong = "",
+                DescriptionLong = "Célesbourg est le village principal des habitants du ciel. On y trouve des maisons flottantes et des commerces où les voyageurs peuvent se reposer avant d'explorer d'autres régions célestes.",
                 Region = "Ciel",
                 Emoji = "🏘️",
-                Couleur = "#87ceeb"
+                Couleur = "#87ceeb",
+                Importance = "Capitale régionale",
+                Image = ""
 
             });
 
