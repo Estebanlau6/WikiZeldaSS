@@ -64,7 +64,7 @@ namespace WikiZeldaSS.Database
                 Emoji = "👹",
                 Couleur = "#FF0000",
                 Importance = "Principal antagoniste",
-                Image = ""
+                Image = "avatar.jpg"
             });
             _database.Insert(new Personnage {
                 Nom = "Impa",
