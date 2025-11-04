@@ -99,7 +99,7 @@ namespace WikiZeldaSS.Database
                 Image = ""
             });
             _database.Insert(new Objet {
-                Nom = "Bbabababaouclier Hylien",
+                Nom = "Bouclier Hylien",
                 DescriptionCourt = "Le bouclier emblématique de Link pour se protéger des attaques.",
                 DescriptionLong = "Le Bouclier Hylien est robuste et résistant aux attaques magiques et physiques. Il est indispensable pour affronter les ennemis puissants et protéger Link lors de ses aventures.",
                 Emoji = "🛡️",
