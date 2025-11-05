@@ -64,7 +64,7 @@ namespace WikiZeldaSS.Database
                 Emoji = "👹",
                 Couleur = "#FF0000",
                 Importance = "Principal antagoniste",
-                Image = "cristaux_de_gratitude.jpg"
+                Image = "avatar.jpg"
             });
             _database.Insert(new Personnage {
                 Nom = "Impa",
@@ -74,7 +74,7 @@ namespace WikiZeldaSS.Database
                 Emoji = "🛡️",
                 Couleur = "#0000FF",
                 Importance = "Secondaire",
-                Image = ""
+                Image = "impa.avif"
             }); 
             _database.Insert(new Personnage {
                 Nom = "Celestrier",
@@ -84,7 +84,7 @@ namespace WikiZeldaSS.Database
                 Emoji = "🦅",
                 Couleur = "#A52A2A",
                 Importance = "Secondaire",
-                Image = ""
+                Image = "celestrier.webp"
             });
 
             _database.Insert(new Objet 
