@@ -44,7 +44,7 @@ namespace WikiZeldaSS.Database
                 Emoji = "🗡️",
                 Couleur = "#00FF00",
                 Importance = "Principal",
-                Image = ""
+                Image = "link.avif"
             });
             _database.Insert(new Personnage {
                 Nom = "Zelda",
@@ -54,7 +54,7 @@ namespace WikiZeldaSS.Database
                 Emoji = "👸",
                 Couleur = "#FFD700",
                 Importance = "Clé de l'histoire",
-                Image = ""
+                Image = "zelda.jpg"
             });
             _database.Insert(new Personnage {
                 Nom = "Ganon",
@@ -96,7 +96,7 @@ namespace WikiZeldaSS.Database
                 Couleur = "#00FF00",
                 Type = "Arme",
                 Importance = "Clé de l’aventure",
-                Image = ""
+                Image = "epee.jpg"
             });
             _database.Insert(new Objet {
                 Nom = "Bouclier Hylien",
@@ -106,7 +106,7 @@ namespace WikiZeldaSS.Database
                 Couleur = "#0000FF",
                 Type = "Bouclier",
                 Importance = "Indispensable",
-                Image = ""
+                Image = "bouclier.jpg"
             });
             _database.Insert(new Objet {
                 Nom = "Scarabée",
@@ -116,7 +116,7 @@ namespace WikiZeldaSS.Database
                 Couleur = "#9b59b6",
                 Type = "Gadget",
                 Importance = "Très utile",
-                Image = ""
+                Image = "scarabe"
             });
             _database.Insert(new Objet {
                 Nom = "Arc",
@@ -126,7 +126,7 @@ namespace WikiZeldaSS.Database
                 Couleur = "#8e44ad",
                 Type = "Arme",
                 Importance = "Très utile",
-                Image = ""
+                Image = "arc.png"
             });
             _database.Insert(new Quete
             {
