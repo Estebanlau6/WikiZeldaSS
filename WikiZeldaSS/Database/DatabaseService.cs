@@ -26,7 +26,7 @@ namespace WikiZeldaSS.Database
         public DatabaseService()
         {
             _database = new SQLiteConnection(DatabasePath, Flags);
-            //Création des tables
+            ////Création des tables
             _database.DeleteAll<Quete>();
             _database.DeleteAll<Personnage>();
             _database.DeleteAll<Objet>();
@@ -215,7 +215,7 @@ namespace WikiZeldaSS.Database
                 Emoji = "🌲",
                 Couleur = "#27ae60",
                 Importance = "Point de départ des aventures",
-                Image = ""
+                Image = "firone.webp"
             });
 
             _database.Insert(new Lieu {
