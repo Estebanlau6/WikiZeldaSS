@@ -1,54 +1,79 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:WikiZeldaSS.ViewModels"
              xmlns:model="clr-namespace:WikiZeldaSS.Models"
              x:Class="WikiZeldaSS.Pages.ObjetsPage"
-             Title="Objets"
+             Title="Objets de Skyward Sword"
              BackgroundColor="#1a1a2e">
     <ScrollView>
         <VerticalStackLayout Spacing="15" Padding="20">
 
-        <Label Text="Objets de Skyward Sword"
+            <Label Text="Objets de Skyward Sword"
                FontSize="28"
                FontAttributes="Bold"
                TextColor="#ffd700"
                HorizontalOptions="Center"
-               Margin="0,10,0,20" />
+               Margin="0,10,0,10" />
 
-        <CollectionView x:Name="ObjetsCollectionView"
+            <CollectionView x:Name="ObjetsCollectionView"
                         SelectionMode="Single"
                         ItemsSource="{Binding Objets}"
                         SelectionChangedCommand="{Binding OpenDetailPageCommand}"
                         SelectionChangedCommandParameter="{Binding SelectedItem, Source={x:Reference ObjetsCollectionView}}">
 
-            <CollectionView.ItemsLayout>
-                <LinearItemsLayout Orientation="Vertical" ItemSpacing="5"/>
-            </CollectionView.ItemsLayout>
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout Orientation="Vertical" ItemSpacing="0"/>
+                </CollectionView.ItemsLayout>
 
-            <CollectionView.ItemTemplate>
-                <DataTemplate x:DataType="model:Objet">
-                    <Border BackgroundColor="#2c3e50" Padding="15" StrokeShape="RoundRectangle 10">
-                        <VerticalStackLayout HorizontalOptions="Start">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="model:Objet">
 
-                            <HorizontalStackLayout Spacing="10" HorizontalOptions="Start">
-                                <Label Text="{Binding Emoji}" FontSize="24" VerticalOptions="Center" />
+                        <Border Stroke="#ffd700"
+                            StrokeThickness="1"
+                            StrokeShape="RoundRectangle 20"
+                            BackgroundColor="#0d1321"
+                            Padding="15"
+                            Margin="10">
+                            <VerticalStackLayout Spacing="15">
+
+                                <Label Text="{Binding Emoji}" 
+                                   FontSize="40"
+                                   HorizontalOptions="Center" />
+
                                 <Label Text="{Binding Nom}"
-                                       FontSize="20"
-                                       FontAttributes="Bold"
-                                       TextColor="{Binding Couleur}"
-                                       VerticalOptions="Center" />
-                            </HorizontalStackLayout>
+                                   FontSize="24"
+                                   FontAttributes="Bold"
+                                   TextColor="{Binding Couleur}"
+                                   HorizontalOptions="Center" />
 
-                            <Label Text="{Binding DescriptionCourt}"
+                                <BoxView HeightRequest="2" Color="#ffd700" />
+
+                                <Border Stroke="#ffd700"
+                                    StrokeThickness="2"
+                                    StrokeShape="RoundRectangle 15"
+                                    BackgroundColor="#0d1321"
+                                    Padding="0"
+                                    HorizontalOptions="Center">
+
+                                    <Image Source="{Binding Image}"
+                                       Aspect="AspectFit" 
+                                       MaximumHeightRequest="180" 
+                                       MaximumWidthRequest="280" 
+                                       HorizontalOptions="Center"
+                                       VerticalOptions="Center" />
+                                </Border>
+
+                                <Label Text="{Binding DescriptionCourt}"
                                    FontSize="14"
                                    TextColor="White"
                                    LineBreakMode="WordWrap"
                                    HorizontalOptions="Start" />
-                        </VerticalStackLayout>
-                    </Border>
-                </DataTemplate>
-            </CollectionView.ItemTemplate>
-        </CollectionView>
-    </VerticalStackLayout>
-        </ScrollView>
+                            </VerticalStackLayout>
+                        </Border>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>
