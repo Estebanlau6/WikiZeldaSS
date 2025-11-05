@@ -5,6 +5,7 @@
              x:Class="WikiZeldaSS.Pages.LieuxPage"
              Title="Lieux de Skyward Sword"
              BackgroundColor="#1a1a2e">
+    <ScrollView>
     <VerticalStackLayout Spacing="15" Padding="20">
             <Label Text="Lieux de Skyward Sword"
                FontSize="28"
@@ -46,5 +47,6 @@
                 </CollectionView.ItemTemplate>
             </CollectionView>
         </VerticalStackLayout>
+        </ScrollView>
     </ContentPage>
 
