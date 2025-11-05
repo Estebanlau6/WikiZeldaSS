@@ -27,6 +27,10 @@ namespace WikiZeldaSS.Database
         {
             _database = new SQLiteConnection(DatabasePath, Flags);
             ////Création des tables
+            _database.DeleteAll<Lieu>();
+            _database.DeleteAll<Personnage>();
+            _database.DeleteAll<Objet>();
+            _database.DeleteAll<Quete>();
             _database.CreateTable<Lieu>();
             if (!_database.GetAllWithChildren<Lieu>().Any())
             {
