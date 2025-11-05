@@ -5,7 +5,7 @@
              x:Class="WikiZeldaSS.Pages.LieuxPage"
              Title="Lieux de Skyward Sword"
              BackgroundColor="#1a1a2e">
-    
+    <ScrollView>
     <VerticalStackLayout Spacing="15" Padding="20">
             <Label Text="Lieux de Skyward Sword"
                FontSize="28"
@@ -61,37 +61,13 @@
                             <Label Text="{Binding DescriptionCourt}"
                                    FontSize="14"
                                    TextColor="White"
-                                   HorizontalOptions="Center"
-                                   HorizontalTextAlignment="Center"
-                                   LineBreakMode="TailTruncation"
-                                   MaxLines="2" />
-
-                            <Label Text="📍 Région"
-                                   FontSize="18"
-                                   FontAttributes="Bold"
-                                   TextColor="#ffd700"
-                                   Margin="0,5,0,0"/>
-                            <Label Text="{Binding Region}"
-                                   FontSize="14"
-                                   TextColor="White"
-                                   LineBreakMode="WordWrap" />
-
-                            <Label Text="⚡ Importance"
-                                   FontSize="18"
-                                   FontAttributes="Bold"
-                                   TextColor="#ffd700"
-                                   Margin="0,5,0,0"/>
-                            <Label Text="{Binding Importance}"
-                                   FontSize="14"
-                                   TextColor="White"
-                                   LineBreakMode="WordWrap" />
-
-                        </VerticalStackLayout>
-                    </Border>
-                </DataTemplate>
-            </CollectionView.ItemTemplate>
-                        
-        </CollectionView>
-    </VerticalStackLayout>
-</ContentPage>
+                                   LineBreakMode="WordWrap"
+                                   HorizontalOptions="Start" />
+                            </VerticalStackLayout>
+                        </Border>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </VerticalStackLayout>
+    </ContentPage>
 

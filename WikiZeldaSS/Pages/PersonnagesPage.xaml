@@ -5,8 +5,8 @@
              x:Class="WikiZeldaSS.Pages.PersonnagesPage"
              Title="Personnages"
              BackgroundColor="#1a1a2e">
-
-    <VerticalStackLayout Spacing="15" Padding="20">
+    <ScrollView>
+        <VerticalStackLayout Spacing="15" Padding="20">
 
         <Label Text="Personnages de Skyward Sword"
                FontSize="28"
@@ -50,5 +50,5 @@
             </CollectionView.ItemTemplate>
         </CollectionView>
     </VerticalStackLayout>
-
+    </ScrollView>
 </ContentPage>
