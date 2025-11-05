@@ -23,13 +23,26 @@
 
             <CollectionView.ItemTemplate>
                 <DataTemplate x:DataType="model:Lieu">
-                    
-                    <Border Stroke="#ffd700"
+
+                        <Border Stroke="#ffd700"
                             StrokeThickness="1"
                             StrokeShape="RoundRectangle 20"
                             BackgroundColor="#0d1321"
                             Padding="15"
-                            Margin="10"> <VerticalStackLayout Spacing="15">
+                            Margin="10">
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="CommonStates">
+
+                                    <VisualState x:Name="Normal" />
+
+                                    <VisualState x:Name="Selected">
+                                        <VisualState.Setters>
+                                        </VisualState.Setters>
+                                    </VisualState>
+
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                            <VerticalStackLayout Spacing="15">
 
                             <Label Text="{Binding Emoji}" 
                                    FontSize="40"

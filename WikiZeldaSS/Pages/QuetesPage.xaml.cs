@@ -10,4 +10,11 @@ public partial class QuetesPage : ContentPage
 		InitializeComponent();
         BindingContext = viewModel;
     }
+    protected override void OnAppearing()
+    {
+        base.OnAppearing();
+
+
+        QuetesCollectionView.SelectedItem = null;
+    }
 }

@@ -268,7 +268,6 @@ namespace WikiZeldaSS.Database
 
                 if (!_database.GetAllWithChildren<Quete>().Any())
                 {
-                    // (Tu dois avoir un 'using WikiZeldaSS.Models;' en haut de ton fichier)
 
                     if (!_database.GetAllWithChildren<Quete>().Any())
                     {
@@ -282,24 +281,20 @@ namespace WikiZeldaSS.Database
                             Objectif = "Aider les habitants de Célesbourg et des environs pour obtenir tous les 80 Cristaux de gratitude.",
                             Recompense = "Portefeuilles améliorés, Rubis, Cristal de démon (80).",
                             Image = "cristaux.avif",
-
-                            // === NOUVEAUX CHAMPS ===
                             DonneurQuete = "Divers habitants de Célesbourg (Récompenses chez Morcego)",
                             Localisation = "Célesbourg (principalement)"
                         });
 
                         _database.Insert(new Quete
                         {
-                            Nom = "La lettre de Cawlin", // Nom corrigé pour coller à la description
+                            Nom = "La lettre de Cawlin",
                             DescriptionCourt = "Une quête romantique où Link doit choisir entre deux prétendants amoureux de Karane.",
                             DescriptionLong = "Cawlin, l’un des apprentis chevaliers de Célesbourg, est amoureux de Karane. Il demande à Link de lui remettre une lettre d’amour. Cependant, un autre prétendant, Peater, est lui aussi épris de Karane. Link doit choisir à qui remettre la lettre.",
-                            Emoji = "💌", // Emoji changé pour "lettre"
+                            Emoji = "💌",
                             Couleur = "#e74c3c",
                             Objectif = "Remettre la lettre de Cawlin à Karane ou la donner à Peater.",
                             Recompense = "5 Cristaux de gratitude.",
                             Image = "amour.jpg",
-
-                            // === NOUVEAUX CHAMPS ===
                             DonneurQuete = "Cawlin",
                             Localisation = "École de Chevalerie (Célesbourg)"
                         });
@@ -314,8 +309,6 @@ namespace WikiZeldaSS.Database
                             Objectif = "Aider le propriétaire Pumm en accomplissant ses tâches.",
                             Recompense = "Cristaux de gratitude, accès à la mission de la Citrouille céleste.",
                             Image = "citrouilles.jpg",
-
-                            // === NOUVEAUX CHAMPS ===
                             DonneurQuete = "Pumm (Propriétaire)",
                             Localisation = "La Citrouille Perchée (Île)"
                         });
@@ -330,8 +323,6 @@ namespace WikiZeldaSS.Database
                             Objectif = "Obtenir le meilleur score possible en tranchant le bambou.",
                             Recompense = "Rubis ou Trésors (selon le score)",
                             Image = "bamboux.jpg",
-
-                            // === NOUVEAUX CHAMPS ===
                             DonneurQuete = "Peater",
                             Localisation = "Île Bambou (Le Ciel)"
                         });
@@ -346,8 +337,6 @@ namespace WikiZeldaSS.Database
                             Objectif = "Attraper toutes les espèces d’insectes et les rapporter à Terry.",
                             Recompense = "Rubis, améliorations de potions (via les insectes).",
                             Image = "insectes.webp",
-
-                            // === NOUVEAUX CHAMPS ===
                             DonneurQuete = "Terry",
                             Localisation = "Boutique de Terry / Toutes les régions"
                         });
@@ -362,8 +351,6 @@ namespace WikiZeldaSS.Database
                             Objectif = "Utiliser la Harpe de la Déesse pour réveiller les Dragons.",
                             Recompense = "Avancée dans la quête principale.",
                             Image = "harpes.webp",
-
-                            // === NOUVEAUX CHAMPS ===
                             DonneurQuete = "Zelda / Impa (Quête principale)",
                             Localisation = "Terre d'en Bas (Lieux de Sceaux)"
                         });

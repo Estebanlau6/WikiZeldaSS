@@ -9,4 +9,11 @@ public partial class PersonnagesPage : ContentPage
         InitializeComponent();
         BindingContext = viewModel;
     }
+    protected override void OnAppearing()
+    {
+        base.OnAppearing();
+
+        
+        PersonnagesCollectionView.SelectedItem = null;
+    }
 }

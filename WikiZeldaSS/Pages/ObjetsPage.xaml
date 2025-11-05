@@ -35,6 +35,19 @@
                             BackgroundColor="#0d1321"
                             Padding="15"
                             Margin="10">
+
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="CommonStates">
+
+                                    <VisualState x:Name="Normal" />
+
+                                    <VisualState x:Name="Selected">
+                                        <VisualState.Setters>
+                                        </VisualState.Setters>
+                                    </VisualState>
+
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
                             <VerticalStackLayout Spacing="15">
 
                                 <Label Text="{Binding Emoji}" 

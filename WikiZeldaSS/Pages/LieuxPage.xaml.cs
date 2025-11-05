@@ -11,5 +11,12 @@ public partial class LieuxPage : ContentPage
         InitializeComponent();
         BindingContext = viewModel;
     }
+    protected override void OnAppearing()
+    {
+        base.OnAppearing();
+
+
+        LieuxCollectionView.SelectedItem = null;
+    }
 
 }
