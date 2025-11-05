@@ -19,6 +19,16 @@ namespace WikiZeldaSS.Models
         public string? Image { get; set; }
         public string? Importance { get; set; } 
 
+        public string? Donjons { get; set; }
+
+        public string? Mecanique { get; set; }
+
+        public string? Habitants { get; set; }
+
+        public string? ObjetsObtenus { get; set; }
+
+
+
 
 
     }

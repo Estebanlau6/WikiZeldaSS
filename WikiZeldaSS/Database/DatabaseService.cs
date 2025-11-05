@@ -26,7 +26,7 @@ namespace WikiZeldaSS.Database
         public DatabaseService()
         {
             _database = new SQLiteConnection(DatabasePath, Flags);
-            ////Création des tables
+            //Création des tables
             //_database.DeleteAll<Lieu>();
             //_database.DeleteAll<Personnage>();
             //_database.DeleteAll<Objet>();
@@ -40,229 +40,343 @@ namespace WikiZeldaSS.Database
                 _database.Insert(new Lieu
                 {
                     Nom = "Célesbourg",
-                    DescriptionCourt = "Un village flottant dans le ciel, habité par des humains et des célestriers.",
-                    DescriptionLong = "Célesbourg est le village principal des habitants du ciel. On y trouve des maisons flottantes et des commerces où les voyageurs peuvent se reposer avant d'explorer d'autres régions célestes.",
-                    Region = "Ciel",
+                    DescriptionCourt = "Une île flottante dans le ciel, servant de village principal.",
+                    DescriptionLong = "Célesbourg est le point de départ de Link et le hub central du jeu. C'est un village paisible flottant au-dessus des nuages, protégé par la Déesse Hylia. On y trouve la place du marché, l'École de Chevalerie et la majestueuse Statue de la Déesse.",
+                    Region = "Le Ciel",
                     Emoji = "🏘️",
                     Couleur = "#87ceeb",
-                    Importance = "Capitale régionale",
-                    Image = "celesbourg.jpg"
-
+                    Image = "celesbourg.jpg",
+                    Donjons = "Aucun (Hub principal)",
+                    Habitants = "Hyliens (Célesbourgeois), Célestriers",
+                    Mecanique = "Vol en Célestrier, Quêtes secondaires, Commerces",
+                    ObjetsObtenus = "Épée d'entraînement, Bouclier, Fiole Vide"
                 });
 
                 _database.Insert(new Lieu
                 {
                     Nom = "Forêt de Firone",
-                    DescriptionCourt = "Une vaste forêt mystérieuse, souvent le point de départ des aventures de Link.",
-                    DescriptionLong = "La Forêt de Firone est dense et magique, remplie de créatures étranges et de secrets cachés. Les aventuriers doivent faire attention aux embuscades et aux énigmes naturelles qui s'y trouvent.",
-                    Region = "Hyrule",
+                    DescriptionCourt = "Une forêt ancienne et luxuriante, première région de la Terre d'en Bas.",
+                    DescriptionLong = "La Forêt de Firone est un lieu dense et magique, rempli de champignons géants et de cours d'eau. C'est le foyer des Kikwis, de curieuses créatures végétales. C'est ici que Link commence sa quête sur la terre ferme.",
+                    Region = "Firone (Terre d'en Bas)",
                     Emoji = "🌲",
                     Couleur = "#27ae60",
-                    Importance = "Point de départ des aventures",
-                    Image = "firone.webp"
+                    Image = "firone.webp",
+                    Donjons = "Temple de la Contemplation, Grand Arbre Sacré",
+                    Habitants = "Kikwis, Bokoblins, Parella",
+                    Mecanique = "Recherche (Kikwis), Nage sous-marine, Lierres",
+                    ObjetsObtenus = "Lance-Pierre, Bouteille (offerte par la Doyenne)"
                 });
 
                 _database.Insert(new Lieu
                 {
                     Nom = "Volcan d'Ordinn",
-                    DescriptionCourt = "Une montagne volcanique dangereuse, abritant des ennemis puissants et des trésors cachés.",
-                    DescriptionLong = "Le Volcan d'Ordinn est un lieu ardent où la lave et les créatures de feu sont omniprésentes. Les aventuriers doivent être bien équipés pour survivre et trouver les trésors légendaires.",
-                    Region = "Hyrule",
+                    DescriptionCourt = "Une région volcanique aride, pleine de dangers et de peuples robustes.",
+                    DescriptionLong = "Le Volcan d'Ordinn est une montagne périlleuse où la chaleur est si intense que les boucliers en bois peuvent brûler. Des rivières de lave et des éruptions fréquentes en font un lieu hostile, foyer des Mogmas, un peuple de taupes chasseurs de trésors.",
+                    Region = "Ordinn (Terre d'en Bas)",
                     Emoji = "⛰️",
                     Couleur = "#e74c3c",
-                    Importance = "Zone de haut niveau",
-                    Image = "volcan.jpg"
-                });
-                _database.Insert(new Lieu
-                {
-                    Nom = "Désert de Lanele",
-                    DescriptionCourt = "Un vaste désert aride, rempli de ruines anciennes et de créatures hostiles.",
-                    DescriptionLong = "Le Désert de Lanele est une étendue brûlante où le sable et les vents tourbillonnants mettent à l'épreuve la résistance des voyageurs. On y trouve des temples enfouis et des trésors anciens.",
-                    Region = "Hyrule",
-                    Emoji = "🏜️",
-                    Couleur = "#f39c12",
-                    Importance = "Exploration et énigmes",
-                    Image = "lanelle.jpg"
+                    Image = "volcan.jpg",
+                    Donjons = "Temple de la Terre, Grand Sanctuaire Ancien",
+                    Habitants = "Mogmas, Bokoblins de feu, Lizalfos",
+                    Mecanique = "Chaleur intense (dégâts), Glissades, Creuser",
+                    ObjetsObtenus = "Gants Creuse-Tout, Sac de Bombes"
                 });
 
+                _database.Insert(new Lieu
+                {
+                    Nom = "Désert de Lanelle",
+                    DescriptionCourt = "Un ancien océan asséché, où le temps peut être manipulé.",
+                    DescriptionLong = "Autrefois un océan verdoyant, le Désert de Lanelle est maintenant une étendue de sable sans vie. Grâce aux Chronolithes, Link peut ramener des zones à leur état passé glorieux, révélant une technologie ancienne, des robots et une mer luxuriante.",
+                    Region = "Lanelle (Terre d'en Bas)",
+                    Emoji = "🏜️",
+                    Couleur = "#f39c12",
+                    Image = "lanelle.jpg",
+                    Donjons = "Raffinerie de Lanelle, Temple du Temps",
+                    Habitants = "Robots Anciens (LD-301), Dragon de Foudre Lanelle",
+                    Mecanique = "Chronolithes (voyage temporel), Sables mouvants",
+                    ObjetsObtenus = "Jarron Magique, Grappin, Gants de Puissance"
+                });
             }
             if (!_database.GetAllWithChildren<Personnage>().Any())
             {
-                _database.Insert(new Personnage
-                {
-                    Nom = "Link",
-                    DescriptionCourt = "Le héros principal de la série, souvent chargé de sauver la princesse Zelda et de vaincre Ganon.",
-                    DescriptionLong = "Link est courageux et déterminé. Il parcourt Hyrule pour protéger le royaume et accomplir des quêtes légendaires. Il manie l'épée et le bouclier avec maîtrise, et son cœur pur lui permet de triompher des ténèbres.",
-                    Role = "Héros",
-                    Emoji = "🗡️",
-                    Couleur = "#00FF00",
-                    Importance = "Principal",
-                    Image = "link.avif"
-                });
-                _database.Insert(new Personnage
-                {
-                    Nom = "Zelda",
-                    DescriptionCourt = "La princesse du royaume d'Hyrule, souvent enlevée par Ganon et sauvée par Link.",
-                    DescriptionLong = "Zelda est intelligente et sage, possédant souvent des pouvoirs magiques liés à la Triforce. Elle guide Link et joue un rôle central dans la lutte contre les forces du mal.",
-                    Role = "Princesse",
-                    Emoji = "👸",
-                    Couleur = "#FFD700",
-                    Importance = "Clé de l'histoire",
-                    Image = "zelda.jpg"
-                });
-                _database.Insert(new Personnage
-                {
-                    Nom = "Ganon",
-                    DescriptionCourt = "L'antagoniste principal de la série, souvent représenté comme un puissant sorcier ou un démon.",
-                    DescriptionLong = "Ganon est l'ennemi juré de Link et Zelda. Maître de la magie noire, il cherche à conquérir Hyrule et à s'emparer de la Triforce. Son pouvoir et sa ruse en font un adversaire redoutable.",
-                    Role = "Antagoniste",
-                    Emoji = "👹",
-                    Couleur = "#FF0000",
-                    Importance = "Principal antagoniste",
-                    Image = "avatar.jpg"
-                });
-                _database.Insert(new Personnage
-                {
-                    Nom = "Impa",
-                    DescriptionCourt = "Une membre du clan Sheikah, souvent protectrice de la princesse Zelda.",
-                    DescriptionLong = "Impa est une guerrière loyale et sage, veillant sur la princesse Zelda depuis son enfance. Elle maîtrise de nombreuses techniques de combat et possède des connaissances secrètes du clan Sheikah.",
-                    Role = "Protectrice",
-                    Emoji = "🛡️",
-                    Couleur = "#0000FF",
-                    Importance = "Secondaire",
-                    Image = "impa.avif"
-                });
-                _database.Insert(new Personnage
-                {
-                    Nom = "Celestrier",
-                    DescriptionCourt = "Chaque habitant de Célesbourg possède son propre célestrier, qu'il appelle en sifflant et monte pour voyager dans le Ciel.",
-                    DescriptionLong = "Les célestriers sont des montures volantes rapides et intelligentes, permettant de voyager dans le Ciel. Ils sont fidèles à leur cavalier et jouent un rôle essentiel dans le quotidien de Célesbourg.",
-                    Role = "Monture",
-                    Emoji = "🦅",
-                    Couleur = "#A52A2A",
-                    Importance = "Secondaire",
-                    Image = "celestrier.jpg"
-                });
+                // (Tu dois avoir un 'using WikiZeldaSS.Models;' en haut de ton fichier)
 
-            }
+                if (!_database.GetAllWithChildren<Personnage>().Any())
+                {
+                    _database.Insert(new Personnage
+                    {
+                        Nom = "Link",
+                        DescriptionCourt = "Le héros de Skyward Sword, un chevalier de Célesbourg.",
+                        DescriptionLong = "Un jeune apprenti chevalier de Célesbourg, ami d'enfance de Zelda. Courageux et déterminé, il est choisi par l'Épée de la Déesse pour descendre sur la Terre d'en Bas à la recherche de Zelda et accomplir son destin.",
+                        Emoji = "🗡️",
+                        Couleur = "#00b894", // Vert plus "Zelda"
+                        Image = "link.avif",
+                        Race = "Hylien (Célesbourgeois)",
+                        Role = "Héros, Porteur de l'Épée de la Déesse",
+                        Localisation = "Célesbourg, Terre d'en Bas",
+                        QueteAssociee = "La quête principale (Sauver Zelda)"
+                    });
 
-            if (!_database.GetAllWithChildren<Objet>().Any())
-            {
-                _database.Insert(new Objet
-                {
-                    Nom = "Épée de Légende",
-                    DescriptionCourt = "L’arme principale de Link, qui évolue au fil de l’aventure jusqu’à devenir la Master Sword.",
-                    DescriptionLong = "L’Épée de Légende est l’arme légendaire de Link, capable de repousser les forces du mal. Elle doit être purifiée et améliorée au cours de l’aventure pour atteindre sa forme finale, la Master Sword.",
-                    Emoji = "🗡️",
-                    Couleur = "#00FF00",
-                    Type = "Arme",
-                    Importance = "Clé de l’aventure",
-                    Image = "epee.jpg"
-                });
-                _database.Insert(new Objet
-                {
-                    Nom = "Bouclier Hylien",
-                    DescriptionCourt = "Le bouclier emblématique de Link pour se protéger des attaques.",
-                    DescriptionLong = "Le Bouclier Hylien est robuste et résistant aux attaques magiques et physiques. Il est indispensable pour affronter les ennemis puissants et protéger Link lors de ses aventures.",
-                    Emoji = "🛡️",
-                    Couleur = "#0000FF",
-                    Type = "Bouclier",
-                    Importance = "Indispensable",
-                    Image = "bouclier.jpg"
-                });
-                _database.Insert(new Objet
-                {
-                    Nom = "Scarabée",
-                    DescriptionCourt = "Petit insecte mécanique télécommandé par Link. Sert à activer des mécanismes et ramasser des objets.",
-                    DescriptionLong = "Le Scarabée est un gadget mécanique permettant d'activer des interrupteurs à distance, de récupérer des objets dans des zones difficiles d'accès et de résoudre des énigmes complexes.",
-                    Emoji = "🐞",
-                    Couleur = "#9b59b6",
-                    Type = "Gadget",
-                    Importance = "Très utile",
-                    Image = "scarabe"
-                });
-                _database.Insert(new Objet
-                {
-                    Nom = "Arc",
-                    DescriptionCourt = "Permet de tirer des flèches avec précision, utile contre les ennemis volants ou éloignés.",
-                    DescriptionLong = "L'Arc est une arme à distance qui permet de toucher des ennemis depuis la sécurité. Il peut être amélioré avec différents types de flèches et joue un rôle crucial dans les combats stratégiques.",
-                    Emoji = "🏹",
-                    Couleur = "#8e44ad",
-                    Type = "Arme",
-                    Importance = "Très utile",
-                    Image = "arc.png"
-                });
-            }
+                    _database.Insert(new Personnage
+                    {
+                        Nom = "Zelda",
+                        DescriptionCourt = "L'amie d'enfance de Link et la réincarnation de la Déesse Hylia.",
+                        DescriptionLong = "Fille du directeur Gaepora, Zelda est une jeune femme joyeuse et spirituelle de Célesbourg. Elle est emportée par une tornade et se réveille sur la Terre d'en Bas, où elle doit accomplir un pèlerinage pour purifier son esprit en tant que réincarnation de la Déesse Hylia.",
+                        Emoji = "👸",
+                        Couleur = "#FFD700",
+                        Image = "zelda.jpg",
+                        Race = "Hylienne (Réincarnation de Hylia)",
+                        Role = "Pivot de l'histoire, Prêtresse",
+                        Localisation = "Célesbourg, Divers Temples (Terre d'en Bas)",
+                        QueteAssociee = "La quête principale (Pèlerinage)"
+                    });
 
+                    _database.Insert(new Personnage
+                    {
+                        Nom = "Ghirahim",
+                        DescriptionCourt = "L'antagoniste excentrique et autoproclamé 'Seigneur Démon'.",
+                        DescriptionLong = "Ghirahim est le principal antagoniste qui poursuit Zelda. Excentrique, narcissique et sadique, il se bat avec une grâce démoniaque. Il cherche à utiliser Zelda pour ressusciter son véritable maître.",
+                        Emoji = "💎",
+                        Couleur = "#9b59b6", // Violet pour lui
+                        Image = "ghirahim.jpg", // Tu auras besoin d'une image "ghirahim.jpg"
+                        Race = "Esprit de l'Épée (Démoniaque)",
+                        Role = "Antagoniste principal, Serviteur de l'Avatar",
+                        Localisation = "Divers donjons (Lieu de combat)",
+                        QueteAssociee = "Bloquer l'avancée de Link"
+                    });
 
-            if (!_database.GetAllWithChildren<Quete>().Any())
-            {
-                _database.Insert(new Quete
+                    _database.Insert(new Personnage
+                    {
+                        Nom = "Impa",
+                        DescriptionCourt = "La protectrice de Zelda et une servante dévouée de la Déesse.",
+                        DescriptionLong = "Une guerrière Sheikah mystérieuse et stoïque. Elle apparaît pour la première fois jeune, guidant et protégeant Zelda lors de son pèlerinage sur la Terre d'en Bas. Elle fait preuve d'une grande sagesse et d'une loyauté indéfectible envers la Déesse.",
+                        Emoji = "🛡️",
+                        Couleur = "#3498db", // Bleu plus Sheikah
+                        Image = "impa.avif",
+                        Race = "Sheikah",
+                        Role = "Protectrice, Guide Spirituel",
+                        Localisation = "Temple de la Contemplation, Temple du Temps",
+                        QueteAssociee = "Protéger Zelda, Guider Link"
+                    });
+
+                    _database.Insert(new Personnage
+                    {
+                        Nom = "Hergo (Groose)",
+                        DescriptionCourt = "La brute de l'École de Chevalerie et le rival auto-proclamé de Link.",
+                        DescriptionLong = "D'abord une brute jalouse qui tourmente Link, Hergo subit une évolution de personnage majeure. Après avoir suivi Link sur la Terre d'en Bas, il devient un allié improbable, utilisant son ingéniosité (et le 'Catapulte-stop') pour aider Link à sa manière.",
+                        Emoji = "💪",
+                        Couleur = "#e67e22", // Roux
+                        Image = "hergo.jpg",
+                        Race = "Hylien (Célesbourgeois)",
+                        Role = "Rival, Allié comique, Inventeur",
+                        Localisation = "Célesbourg, Vallon du Sceau",
+                        QueteAssociee = "Construction du Catapulte-stop"
+                    });
+
+                    _database.Insert(new Personnage
+                    {
+                        Nom = "Fay (Fi)",
+                        DescriptionCourt = "L'esprit de l'Épée de la Déesse (Master Sword).",
+                        DescriptionLong = "Fay est un esprit analytique et logique créé par la Déesse Hylia, résidant dans l'Épée de la Déesse. Elle sert de guide à Link, lui fournissant des informations, des statistiques sur les ennemis et des conseils (souvent très évidents) pour l'aider dans sa quête.",
+                        Emoji = "⚔️",
+                        Couleur = "#5eaaa8", // Un bleu-vert spectral
+                        Image = "fay.jpg", // Tu auras besoin d'une image "fay.jpg"
+                        Race = "Esprit (Création de la Déesse)",
+                        Role = "Guide, Partenaire, Esprit de l'Épée",
+                        Localisation = "Dans l'épée de Link",
+                        QueteAssociee = "Guider le Héros Élu"
+                    });
+                }
+
+                if (!_database.GetAllWithChildren<Objet>().Any())
                 {
-                    Nom = "Cristaux de gratitude",
-                    DescriptionCourt = "Petites quêtes annexes confiées par les habitants de Célesbourg. Chaque mission réussie donne des cristaux à échanger contre des récompenses.",
-                    DescriptionLong = "Les Cristaux de gratitude sont des objets spéciaux que Link obtient en aidant les habitants de Célesbourg et des environs. Ces quêtes annexes consistent à résoudre les problèmes des habitants, de jour comme de nuit. Une fois les quêtes accomplies, Link reçoit un ou plusieurs cristaux qu’il peut rapporter à Morcego (le démon vivant sous Célesbourg). En les échangeant, Morcego se rapproche de son rêve : devenir humain, et Link reçoit de précieuses récompenses.",
-                    Emoji = "💖",
-                    Couleur = "#f39c12",
-                    Objectif = "Aider les habitants de Célesbourg et des environs pour obtenir tous les 80 Cristaux de gratitude.",
-                    Recompense = "Différentes récompenses offertes par Morcego : Portefeuille moyen (5 cristaux), Grand portefeuille (10), Portefeuille géant (30), 300 rubis (30), Rubis d'argent (40), Rubis d'or (70), et le Cristal de démon (80).",
-                    Image = "cristaux.avif"
-                });
-                _database.Insert(new Quete
+                    // (Tu dois avoir un 'using WikiZeldaSS.Models;' en haut de ton fichier)
+
+                    if (!_database.GetAllWithChildren<Objet>().Any())
+                    {
+                        _database.Insert(new Objet
+                        {
+                            Nom = "Épée de la Déesse",
+                            DescriptionCourt = "L'épée sacrée confiée à Link, destinée à devenir la Master Sword.",
+                            DescriptionLong = "L'Épée de la Déesse est l'arme légendaire de Link dans Skyward Sword. Elle réside dans la Statue de la Déesse à Célesbourg. Elle permet de lancer l'Éclat Céleste et est nécessaire pour frapper les Chronolithes.",
+                            Emoji = "🗡️",
+                            Couleur = "#00b894",
+                            Image = "epee.jpg",
+
+                            // === NOUVEAUX CHAMPS ===
+                            Type = "Équipement (Arme)",
+                            Utilisation = "Combat, Éclat Céleste, Activer les Chronolithes",
+                            Localisation = "Statue de la Déesse (Célesbourg)",
+                            Donjon = "Aucun (Hub)"
+                        });
+
+                        _database.Insert(new Objet
+                        {
+                            Nom = "Scarabée",
+                            DescriptionCourt = "Un insecte mécanique télécommandé par Link.",
+                            DescriptionLong = "Le Scarabée est un gadget mécanique permettant d'explorer à distance, d'activer des interrupteurs, de couper des cordes ou des toiles d'araignée, et de ramasser des objets inatteignables. Il peut être amélioré pour être plus rapide ou pour attaquer.",
+                            Emoji = "🐞",
+                            Couleur = "#9b59b6",
+                            Image = "scarabe.png", // J'ai ajouté .png
+
+                            // === NOUVEAUX CHAMPS ===
+                            Type = "Objet Clé / Gadget",
+                            Utilisation = "Mécanismes, Exploration, Récupération d'objets",
+                            Localisation = "Obtenu dans le Temple de la Contemplation",
+                            Donjon = "Temple de la Contemplation"
+                        });
+
+                        _database.Insert(new Objet
+                        {
+                            Nom = "Jarron Magique",
+                            DescriptionCourt = "Un pot ancien capable de souffler un vent puissant.",
+                            DescriptionLong = "Trouvé dans le Désert de Lanelle, ce pot souffle un grand coup de vent. Il est essentiel pour enlever les tas de sable, étourdir les ennemis, faire tourner les hélices et propulser Link sur certaines plateformes.",
+                            Emoji = "💨",
+                            Couleur = "#a29bfe",
+                            Image = "jarron.jpg", // Tu auras besoin d'une image "jarron.jpg"
+
+                            // === NOUVEAUX CHAMPS ===
+                            Type = "Objet Clé / Gadget",
+                            Utilisation = "Souffler du vent, Enlever le sable, Étourdir les ennemis",
+                            Localisation = "Obtenu au Désert de Lanelle",
+                            Donjon = "Raffinerie de Lanelle (Zone)"
+                        });
+
+                        _database.Insert(new Objet
+                        {
+                            Nom = "Grappin",
+                            DescriptionCourt = "Permet de s'accrocher à des cibles spécifiques et à des lierres.",
+                            DescriptionLong = "Le Grappin est un outil indispensable pour la mobilité. Il permet à Link de s'accrocher à des cibles spéciales ou à des murs de lierre pour traverser des gouffres ou atteindre des zones en hauteur. Il est aussi utilisé pour arracher les boucliers de certains ennemis.",
+                            Emoji = "🦞",
+                            Couleur = "#e74c3c",
+                            Image = "grappin.jpg", // Tu auras besoin d'une image "grappin.jpg"
+
+                            // === NOUVEAUX CHAMPS ===
+                            Type = "Objet Clé / Gadget",
+                            Utilisation = "Traverser, Atteindre des hauteurs, Combat",
+                            Localisation = "Obtenu dans le Désert de Lanelle (Raffinerie)",
+                            Donjon = "Raffinerie de Lanelle"
+                        });
+
+                        _database.Insert(new Objet
+                        {
+                            Nom = "Bouclier Hylien",
+                            DescriptionCourt = "Le bouclier ultime et indestructible.",
+                            DescriptionLong = "Contrairement aux autres jeux, le Bouclier Hylien dans Skyward Sword n'est pas trouvé dans un donjon. Il est indestructible et protège contre toutes les attaques (feu, électricité). Il s'obtient en récompense en terminant le Défi de l'Héroïsme du Dragon de Foudre Lanelle.",
+                            Emoji = "🛡️",
+                            Couleur = "#3498db",
+                            Image = "bouclier.jpg",
+                            Type = "Équipement (Bouclier)",
+                            Utilisation = "Défense (Indestructible)",
+                            Localisation = "Récompense du Dragon de Foudre (Mini-jeu)",
+                            Donjon = "Aucun"
+                        });
+                    }
+                }
+
+                if (!_database.GetAllWithChildren<Quete>().Any())
                 {
-                    Nom = "Livre d'amour de Bertie",
-                    DescriptionCourt = "Une quête romantique où Link doit choisir entre deux prétendants amoureux de la même personne.",
-                    DescriptionLong = "Cawlin, l’un des apprentis chevaliers de Célesbourg, est amoureux de Karane, une élève de l’Académie. Il demande à Link de lui remettre une lettre d’amour. Cependant, un autre prétendant, Peater, est lui aussi épris de Karane. Link doit choisir à qui remettre la lettre. Selon le choix, la quête prend une tournure différente : Karane peut tomber amoureuse de Peater, ou Cawlin finit effrayé par un fantôme s’il ne reçoit pas de réponse. Une quête pleine d’humour et de dilemmes !",
-                    Emoji = "📖",
-                    Couleur = "#e74c3c",
-                    Objectif = "Remettre la lettre de Cawlin à Karane ou la donner à Peater, et assumer les conséquences du choix.",
-                    Recompense = "5 Cristaux de gratitude offerts par Peater si la quête est terminée avec succès.",
-                    Image = "amour.jpg"
-                });
-                _database.Insert(new Quete
-                {
-                    Nom = "Quête des citrouilles",
-                    DescriptionCourt = "Au restaurant de la Citrouille perchée, Link doit travailler pour rembourser les pots cassés en servant les clients ou en transportant des citrouilles.",
-                    DescriptionLong = "Lors de sa visite à la Citrouille perchée, Link casse accidentellement un énorme chandelier, provoquant la colère du propriétaire, Pumm. Pour rembourser les dégâts, Link doit effectuer plusieurs petits boulots : transporter des citrouilles, servir les clients ou jouer de la harpe. En accomplissant toutes les tâches, Pumm finit par lui confier une mission spéciale liée à la Citrouille céleste.",
-                    Emoji = "🎃",
-                    Couleur = "#27ae60",
-                    Objectif = "Aider le propriétaire Pumm de la Citrouille perchée en accomplissant ses tâches jusqu’à remboursement complet des dégâts.",
-                    Recompense = "Cristaux de gratitude, accès à la mission de la Citrouille céleste et reconnaissance de Pumm.",
-                    Image = "citrouilles.jpg"
-                });
-                _database.Insert(new Quete
-                {
-                    Nom = "Défi de l'île Bambou",
-                    DescriptionCourt = "Un mini-jeu où Link doit couper le plus de bambous possible en un coup de sabre pour gagner des récompenses.",
-                    DescriptionLong = "Sur l'île Bambou, Peater propose à Link de tester son adresse à l'épée. Le principe est simple : trancher un bambou géant autant de fois que possible avant qu’il ne tombe. Plus le nombre de coupes est élevé, plus la récompense est importante. C’est un excellent moyen de perfectionner les coups d'épée et de gagner des rubis ou des cristaux.",
-                    Emoji = "🎋",
-                    Couleur = "#87ceeb",
-                    Objectif = "Obtenir le meilleur score possible en tranchant le bambou plusieurs fois d’affilée.",
-                    Recompense = "Cristaux de gratitude et rubis selon le score obtenu.",
-                    Image = "bamboux.jpg"
-                });
-                _database.Insert(new Quete
-                {
-                    Nom = "Chasse aux insectes",
-                    DescriptionCourt = "Une quête confiée par Terry où Link doit capturer divers insectes rares disséminés dans les régions du monde.",
-                    DescriptionLong = "Terry, le marchand volant, demande à Link de l’aider à compléter sa collection d’insectes rares. À l’aide du filet, Link doit parcourir les différentes régions de Skyloft et des Terres Inférieures pour attraper chaque espèce. Certains insectes apparaissent seulement à des moments précis ou dans des lieux isolés, ce qui rend la quête longue mais gratifiante.",
-                    Emoji = "🐞",
-                    Couleur = "#9b59b6",
-                    Objectif = "Attraper toutes les espèces d’insectes et les rapporter à Terry pour compléter sa collection.",
-                    Recompense = "Rubis, cristaux de gratitude et améliorations de potions grâce aux insectes capturés.",
-                    Image = "insectes.webp"
-                });
-                _database.Insert(new Quete
-                {
-                    Nom = "Harpe de la Déesse",
-                    DescriptionCourt = "Quêtes musicales où Link doit jouer de la harpe pour réveiller les Dragons et ouvrir de nouveaux chemins.",
-                    DescriptionLong = "Link reçoit la Harpe de la Déesse de Zelda. En voyageant à travers les terres, il doit jouer des mélodies sacrées à différents endroits pour invoquer les Dragons protecteurs et activer les symboles de la Déesse. Chaque mélodie ouvre un nouveau chemin ou révèle un passage secret, rapprochant Link de son destin.",
-                    Emoji = "🎶",
-                    Couleur = "#3498db",
-                    Objectif = "Utiliser la Harpe de la Déesse pour réveiller les Dragons et progresser dans la quête principale.",
-                    Recompense = "Avancée dans la quête principale, activation de nouvelles zones et révélation des symboles sacrés.",
-                    Image = "harpes.webp"
-                });
+                    // (Tu dois avoir un 'using WikiZeldaSS.Models;' en haut de ton fichier)
+
+                    if (!_database.GetAllWithChildren<Quete>().Any())
+                    {
+                        _database.Insert(new Quete
+                        {
+                            Nom = "Cristaux de gratitude",
+                            DescriptionCourt = "Petites quêtes annexes confiées par les habitants de Célesbourg à échanger contre des récompenses.",
+                            DescriptionLong = "Les Cristaux de gratitude sont des objets spéciaux que Link obtient en aidant les habitants de Célesbourg. Ces quêtes annexes consistent à résoudre les problèmes des habitants. Une fois les quêtes accomplies, Link reçoit un ou plusieurs cristaux qu’il peut rapporter à Morcego (le démon vivant sous Célesbourg). En les échangeant, Link reçoit de précieuses récompenses.",
+                            Emoji = "💖",
+                            Couleur = "#f39c12",
+                            Objectif = "Aider les habitants de Célesbourg et des environs pour obtenir tous les 80 Cristaux de gratitude.",
+                            Recompense = "Portefeuilles améliorés, Rubis, Cristal de démon (80).",
+                            Image = "cristaux.avif",
+
+                            // === NOUVEAUX CHAMPS ===
+                            DonneurQuete = "Divers habitants de Célesbourg (Récompenses chez Morcego)",
+                            Localisation = "Célesbourg (principalement)"
+                        });
+
+                        _database.Insert(new Quete
+                        {
+                            Nom = "La lettre de Cawlin", // Nom corrigé pour coller à la description
+                            DescriptionCourt = "Une quête romantique où Link doit choisir entre deux prétendants amoureux de Karane.",
+                            DescriptionLong = "Cawlin, l’un des apprentis chevaliers de Célesbourg, est amoureux de Karane. Il demande à Link de lui remettre une lettre d’amour. Cependant, un autre prétendant, Peater, est lui aussi épris de Karane. Link doit choisir à qui remettre la lettre.",
+                            Emoji = "💌", // Emoji changé pour "lettre"
+                            Couleur = "#e74c3c",
+                            Objectif = "Remettre la lettre de Cawlin à Karane ou la donner à Peater.",
+                            Recompense = "5 Cristaux de gratitude.",
+                            Image = "amour.jpg",
+
+                            // === NOUVEAUX CHAMPS ===
+                            DonneurQuete = "Cawlin",
+                            Localisation = "École de Chevalerie (Célesbourg)"
+                        });
+
+                        _database.Insert(new Quete
+                        {
+                            Nom = "La Citrouille Perchée",
+                            DescriptionCourt = "Au restaurant, Link doit travailler pour rembourser le chandelier cassé.",
+                            DescriptionLong = "Lors de sa visite à la Citrouille perchée, Link casse accidentellement un énorme chandelier. Pour rembourser les dégâts, Link doit effectuer plusieurs petits boulots : transporter des citrouilles, servir les clients ou jouer de la harpe.",
+                            Emoji = "🎃",
+                            Couleur = "#27ae60",
+                            Objectif = "Aider le propriétaire Pumm en accomplissant ses tâches.",
+                            Recompense = "Cristaux de gratitude, accès à la mission de la Citrouille céleste.",
+                            Image = "citrouilles.jpg",
+
+                            // === NOUVEAUX CHAMPS ===
+                            DonneurQuete = "Pumm (Propriétaire)",
+                            Localisation = "La Citrouille Perchée (Île)"
+                        });
+
+                        _database.Insert(new Quete
+                        {
+                            Nom = "Défi de l'île Bambou",
+                            DescriptionCourt = "Un mini-jeu où Link doit couper le plus de bambous possible.",
+                            DescriptionLong = "Sur l'île Bambou, Peater propose à Link de tester son adresse à l'épée. Le principe est simple : trancher un bambou géant autant de fois que possible avant qu’il ne tombe. Plus le nombre de coupes est élevé, plus la récompense est importante.",
+                            Emoji = "🎋",
+                            Couleur = "#87ceeb",
+                            Objectif = "Obtenir le meilleur score possible en tranchant le bambou.",
+                            Recompense = "Rubis ou Trésors (selon le score)",
+                            Image = "bamboux.jpg",
+
+                            // === NOUVEAUX CHAMPS ===
+                            DonneurQuete = "Peater",
+                            Localisation = "Île Bambou (Le Ciel)"
+                        });
+
+                        _database.Insert(new Quete
+                        {
+                            Nom = "Chasse aux insectes",
+                            DescriptionCourt = "Une quête confiée par Terry où Link doit capturer divers insectes rares.",
+                            DescriptionLong = "Terry, le marchand volant, demande à Link de l’aider à compléter sa collection d’insectes rares. À l’aide du filet, Link doit parcourir les différentes régions pour attraper chaque espèce. En échange, Terry offre des réductions ou des récompenses.",
+                            Emoji = "🐞",
+                            Couleur = "#9b59b6",
+                            Objectif = "Attraper toutes les espèces d’insectes et les rapporter à Terry.",
+                            Recompense = "Rubis, améliorations de potions (via les insectes).",
+                            Image = "insectes.webp",
+
+                            // === NOUVEAUX CHAMPS ===
+                            DonneurQuete = "Terry",
+                            Localisation = "Boutique de Terry / Toutes les régions"
+                        });
+
+                        _database.Insert(new Quete
+                        {
+                            Nom = "Harpe de la Déesse",
+                            DescriptionCourt = "Quêtes musicales où Link doit jouer de la harpe pour progresser.",
+                            DescriptionLong = "Link reçoit la Harpe de la Déesse de Zelda. En voyageant à travers les terres, il doit jouer des mélodies sacrées à différents endroits pour invoquer les Dragons protecteurs et activer les symboles de la Déesse.",
+                            Emoji = "🎶",
+                            Couleur = "#3498db",
+                            Objectif = "Utiliser la Harpe de la Déesse pour réveiller les Dragons.",
+                            Recompense = "Avancée dans la quête principale.",
+                            Image = "harpes.webp",
+
+                            // === NOUVEAUX CHAMPS ===
+                            DonneurQuete = "Zelda / Impa (Quête principale)",
+                            Localisation = "Terre d'en Bas (Lieux de Sceaux)"
+                        });
+                    }
+                }
             }
         }
 
