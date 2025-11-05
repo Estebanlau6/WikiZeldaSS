@@ -138,7 +138,7 @@ namespace WikiZeldaSS.Database
                         DescriptionLong = "Ghirahim est le principal antagoniste qui poursuit Zelda. Excentrique, narcissique et sadique, il se bat avec une grâce démoniaque. Il cherche à utiliser Zelda pour ressusciter son véritable maître.",
                         Emoji = "💎",
                         Couleur = "#9b59b6", // Violet pour lui
-                        Image = "ghirahim.jpg", // Tu auras besoin d'une image "ghirahim.jpg"
+                        Image = "ghirahim.webp", 
                         Race = "Esprit de l'Épée (Démoniaque)",
                         Role = "Antagoniste principal, Serviteur de l'Avatar",
                         Localisation = "Divers donjons (Lieu de combat)",
@@ -180,7 +180,7 @@ namespace WikiZeldaSS.Database
                         DescriptionLong = "Fay est un esprit analytique et logique créé par la Déesse Hylia, résidant dans l'Épée de la Déesse. Elle sert de guide à Link, lui fournissant des informations, des statistiques sur les ennemis et des conseils (souvent très évidents) pour l'aider dans sa quête.",
                         Emoji = "⚔️",
                         Couleur = "#5eaaa8", // Un bleu-vert spectral
-                        Image = "fay.jpg", // Tu auras besoin d'une image "fay.jpg"
+                        Image = "fay.png", 
                         Race = "Esprit (Création de la Déesse)",
                         Role = "Guide, Partenaire, Esprit de l'Épée",
                         Localisation = "Dans l'épée de Link",
@@ -190,7 +190,7 @@ namespace WikiZeldaSS.Database
 
                 if (!_database.GetAllWithChildren<Objet>().Any())
                 {
-                    // (Tu dois avoir un 'using WikiZeldaSS.Models;' en haut de ton fichier)
+                
 
                     if (!_database.GetAllWithChildren<Objet>().Any())
                     {
@@ -202,8 +202,6 @@ namespace WikiZeldaSS.Database
                             Emoji = "🗡️",
                             Couleur = "#00b894",
                             Image = "epee.jpg",
-
-                            // === NOUVEAUX CHAMPS ===
                             Type = "Équipement (Arme)",
                             Utilisation = "Combat, Éclat Céleste, Activer les Chronolithes",
                             Localisation = "Statue de la Déesse (Célesbourg)",
@@ -217,9 +215,7 @@ namespace WikiZeldaSS.Database
                             DescriptionLong = "Le Scarabée est un gadget mécanique permettant d'explorer à distance, d'activer des interrupteurs, de couper des cordes ou des toiles d'araignée, et de ramasser des objets inatteignables. Il peut être amélioré pour être plus rapide ou pour attaquer.",
                             Emoji = "🐞",
                             Couleur = "#9b59b6",
-                            Image = "scarabe.png", // J'ai ajouté .png
-
-                            // === NOUVEAUX CHAMPS ===
+                            Image = "scarabe.png", 
                             Type = "Objet Clé / Gadget",
                             Utilisation = "Mécanismes, Exploration, Récupération d'objets",
                             Localisation = "Obtenu dans le Temple de la Contemplation",
@@ -228,14 +224,12 @@ namespace WikiZeldaSS.Database
 
                         _database.Insert(new Objet
                         {
-                            Nom = "Jarron Magique",
+                            Nom = "Jarre Magique",
                             DescriptionCourt = "Un pot ancien capable de souffler un vent puissant.",
                             DescriptionLong = "Trouvé dans le Désert de Lanelle, ce pot souffle un grand coup de vent. Il est essentiel pour enlever les tas de sable, étourdir les ennemis, faire tourner les hélices et propulser Link sur certaines plateformes.",
                             Emoji = "💨",
                             Couleur = "#a29bfe",
-                            Image = "jarron.jpg", // Tu auras besoin d'une image "jarron.jpg"
-
-                            // === NOUVEAUX CHAMPS ===
+                            Image = "jarre.jpg",
                             Type = "Objet Clé / Gadget",
                             Utilisation = "Souffler du vent, Enlever le sable, Étourdir les ennemis",
                             Localisation = "Obtenu au Désert de Lanelle",
@@ -249,9 +243,7 @@ namespace WikiZeldaSS.Database
                             DescriptionLong = "Le Grappin est un outil indispensable pour la mobilité. Il permet à Link de s'accrocher à des cibles spéciales ou à des murs de lierre pour traverser des gouffres ou atteindre des zones en hauteur. Il est aussi utilisé pour arracher les boucliers de certains ennemis.",
                             Emoji = "🦞",
                             Couleur = "#e74c3c",
-                            Image = "grappin.jpg", // Tu auras besoin d'une image "grappin.jpg"
-
-                            // === NOUVEAUX CHAMPS ===
+                            Image = "grappin.jpg", 
                             Type = "Objet Clé / Gadget",
                             Utilisation = "Traverser, Atteindre des hauteurs, Combat",
                             Localisation = "Obtenu dans le Désert de Lanelle (Raffinerie)",
