@@ -99,7 +99,6 @@ namespace WikiZeldaSS.Database
             }
             if (!_database.GetAllWithChildren<Personnage>().Any())
             {
-                // (Tu dois avoir un 'using WikiZeldaSS.Models;' en haut de ton fichier)
 
                 if (!_database.GetAllWithChildren<Personnage>().Any())
                 {
@@ -109,7 +108,7 @@ namespace WikiZeldaSS.Database
                         DescriptionCourt = "Le héros de Skyward Sword, un chevalier de Célesbourg.",
                         DescriptionLong = "Un jeune apprenti chevalier de Célesbourg, ami d'enfance de Zelda. Courageux et déterminé, il est choisi par l'Épée de la Déesse pour descendre sur la Terre d'en Bas à la recherche de Zelda et accomplir son destin.",
                         Emoji = "🗡️",
-                        Couleur = "#00b894", // Vert plus "Zelda"
+                        Couleur = "#00b894",
                         Image = "link.avif",
                         Race = "Hylien (Célesbourgeois)",
                         Role = "Héros, Porteur de l'Épée de la Déesse",
@@ -137,7 +136,7 @@ namespace WikiZeldaSS.Database
                         DescriptionCourt = "L'antagoniste excentrique et autoproclamé 'Seigneur Démon'.",
                         DescriptionLong = "Ghirahim est le principal antagoniste qui poursuit Zelda. Excentrique, narcissique et sadique, il se bat avec une grâce démoniaque. Il cherche à utiliser Zelda pour ressusciter son véritable maître.",
                         Emoji = "💎",
-                        Couleur = "#9b59b6", // Violet pour lui
+                        Couleur = "#9b59b6",
                         Image = "ghirahim.webp", 
                         Race = "Esprit de l'Épée (Démoniaque)",
                         Role = "Antagoniste principal, Serviteur de l'Avatar",
@@ -151,7 +150,7 @@ namespace WikiZeldaSS.Database
                         DescriptionCourt = "La protectrice de Zelda et une servante dévouée de la Déesse.",
                         DescriptionLong = "Une guerrière Sheikah mystérieuse et stoïque. Elle apparaît pour la première fois jeune, guidant et protégeant Zelda lors de son pèlerinage sur la Terre d'en Bas. Elle fait preuve d'une grande sagesse et d'une loyauté indéfectible envers la Déesse.",
                         Emoji = "🛡️",
-                        Couleur = "#3498db", // Bleu plus Sheikah
+                        Couleur = "#3498db",
                         Image = "impa.avif",
                         Race = "Sheikah",
                         Role = "Protectrice, Guide Spirituel",
@@ -161,11 +160,11 @@ namespace WikiZeldaSS.Database
 
                     _database.Insert(new Personnage
                     {
-                        Nom = "Hergo (Groose)",
+                        Nom = "Hergo",
                         DescriptionCourt = "La brute de l'École de Chevalerie et le rival auto-proclamé de Link.",
                         DescriptionLong = "D'abord une brute jalouse qui tourmente Link, Hergo subit une évolution de personnage majeure. Après avoir suivi Link sur la Terre d'en Bas, il devient un allié improbable, utilisant son ingéniosité (et le 'Catapulte-stop') pour aider Link à sa manière.",
                         Emoji = "💪",
-                        Couleur = "#e67e22", // Roux
+                        Couleur = "#e67e22",
                         Image = "hergo.jpg",
                         Race = "Hylien (Célesbourgeois)",
                         Role = "Rival, Allié comique, Inventeur",
@@ -175,11 +174,11 @@ namespace WikiZeldaSS.Database
 
                     _database.Insert(new Personnage
                     {
-                        Nom = "Fay (Fi)",
+                        Nom = "Fay",
                         DescriptionCourt = "L'esprit de l'Épée de la Déesse (Master Sword).",
                         DescriptionLong = "Fay est un esprit analytique et logique créé par la Déesse Hylia, résidant dans l'Épée de la Déesse. Elle sert de guide à Link, lui fournissant des informations, des statistiques sur les ennemis et des conseils (souvent très évidents) pour l'aider dans sa quête.",
                         Emoji = "⚔️",
-                        Couleur = "#5eaaa8", // Un bleu-vert spectral
+                        Couleur = "#5eaaa8",
                         Image = "fay.png", 
                         Race = "Esprit (Création de la Déesse)",
                         Role = "Guide, Partenaire, Esprit de l'Épée",

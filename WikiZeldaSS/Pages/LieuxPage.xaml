@@ -3,7 +3,6 @@
              xmlns:vm="clr-namespace:WikiZeldaSS.ViewModels"
              xmlns:model="clr-namespace:WikiZeldaSS.Models"
              x:Class="WikiZeldaSS.Pages.LieuxPage"
-             Title="Lieux de Skyward Sword"
              BackgroundColor="#1a1a2e">
     <ScrollView>
     <VerticalStackLayout Spacing="15" Padding="20">
