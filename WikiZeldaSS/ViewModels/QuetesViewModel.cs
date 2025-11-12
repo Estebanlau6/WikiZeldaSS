@@ -21,15 +21,13 @@ public partial class QuetesViewModel : ObservableObject
         Quetes = new ObservableCollection<Quete>(_databaseService.GetQuetes());
     }
 
-    // Commande MVVM pour ouvrir la page de détail avec animation fluide
     [RelayCommand]
     private async Task OpenDetailPage(Quete quete)
     {
         if (quete == null)
             return;
 
-        // 🌈 Navigation Shell avec transition animée
-        await Shell.Current.GoToAsync(nameof(QuetesDetail), true, new Dictionary<string, object>
+        await Shell.Current.GoToAsync("QuetesDetailPage", true, new Dictionary<string, object>
         {
             { "Quete", quete }
         });

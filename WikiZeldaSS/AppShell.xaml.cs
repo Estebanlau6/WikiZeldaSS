@@ -11,7 +11,7 @@ namespace WikiZeldaSS
             Routing.RegisterRoute("PersonnagesDetailPage", typeof(PersonnesDetail));
             Routing.RegisterRoute("LieuxDetailPage", typeof(LieuxDetail));
             Routing.RegisterRoute("ObjetsDetailPage", typeof(ObjetsDetail));
-            Routing.RegisterRoute(nameof(QuetesDetail), typeof(QuetesDetail));
+            Routing.RegisterRoute("QuetesDetailPage", typeof(QuetesDetail));
 
 
 
