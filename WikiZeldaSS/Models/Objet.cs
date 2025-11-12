@@ -19,11 +19,11 @@ namespace WikiZeldaSS.Models
         public string? Image { get; set; }
         public string? Importance { get; set; }
 
-        public string Utilisation { get; set; }
+        public string? Utilisation { get; set; }
 
-        public string Localisation { get; set; }
+        public string? Localisation { get; set; }
 
-        public string Donjon { get; set; }
+        public string? Donjon { get; set; }
 
 
     }
