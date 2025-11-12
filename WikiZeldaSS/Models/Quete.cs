@@ -19,9 +19,9 @@ namespace WikiZeldaSS.Models
         public string? Couleur { get; set; }
         public string? Image { get; set; }
 
-        public string DonneurQuete { get; set; }
+        public string? DonneurQuete { get; set; }
 
-        public string Localisation { get; set; }
+        public string? Localisation { get; set; }
 
 
     }

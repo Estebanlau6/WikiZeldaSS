@@ -19,11 +19,11 @@ namespace WikiZeldaSS.Models
         public string? Importance { get; set; }
         public string? Image { get; set; }
 
-        public string Race { get; set; }
+        public string?  Race { get; set; }
 
-        public string Localisation { get; set; }
+        public string? Localisation { get; set; }
 
-        public string QueteAssociee { get; set; }
+        public string? QueteAssociee { get; set; }
 
     }
 }
