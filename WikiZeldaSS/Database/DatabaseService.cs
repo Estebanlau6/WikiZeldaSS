@@ -12,14 +12,11 @@ namespace WikiZeldaSS.Database
 {
     public partial class DatabaseService
     {
-        private readonly SQLiteConnection _database; // Ajout de readonly pour plus de clarté
+        private readonly SQLiteConnection _database; 
         public const string DatabaseFilename = "TodoSQLite.db3";
         public const SQLiteOpenFlags Flags =
-        // open the database in read/write mode
         SQLiteOpenFlags.ReadWrite |
-        // create the database if it doesn't exist  
         SQLiteOpenFlags.Create |
-        // enable multi-threaded database access
         SQLiteOpenFlags.SharedCache;
         public static string DatabasePath =>
         Path.Combine(FileSystem.AppDataDirectory, DatabaseFilename);
@@ -27,10 +24,10 @@ namespace WikiZeldaSS.Database
         {
             _database = new SQLiteConnection(DatabasePath, Flags);
             //Création des tables
-            //_database.DeleteAll<Lieu>();
-            //_database.DeleteAll<Personnage>();
-            //_database.DeleteAll<Objet>();
-            //_database.DeleteAll<Quete>();
+            _database.DeleteAll<Lieu>();
+            _database.DeleteAll<Personnage>();
+            _database.DeleteAll<Objet>();
+            _database.DeleteAll<Quete>();
             _database.CreateTable<Quete>();
             _database.CreateTable<Objet>();
             _database.CreateTable<Lieu>();

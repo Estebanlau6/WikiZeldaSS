@@ -11,7 +11,7 @@ namespace WikiZeldaSS.Details
             set
             {
                 _lieu = value;
-                BindingContext = _lieu; // met à jour le XAML avec les données
+                BindingContext = _lieu; 
             }
         }
         public LieuxDetail()

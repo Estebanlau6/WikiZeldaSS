@@ -3,7 +3,7 @@ using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using WikiZeldaSS.Database;
 using WikiZeldaSS.Models;
-using WikiZeldaSS.Details; // 👈 Ajout pour que nameof(QuetesDetail) fonctionne
+using WikiZeldaSS.Details; 
 
 namespace WikiZeldaSS.ViewModels;
 
@@ -11,7 +11,7 @@ public partial class QuetesViewModel : ObservableObject
 {
     private readonly DatabaseService _databaseService;
 
-    // ✅ Propriété observable (CommunityToolkit gère la génération automatique)
+    
     [ObservableProperty]
     private ObservableCollection<Quete> quetes;
 
@@ -21,7 +21,7 @@ public partial class QuetesViewModel : ObservableObject
         Quetes = new ObservableCollection<Quete>(_databaseService.GetQuetes());
     }
 
-    // 🪄 Commande MVVM pour ouvrir la page de détail avec animation fluide
+    // Commande MVVM pour ouvrir la page de détail avec animation fluide
     [RelayCommand]
     private async Task OpenDetailPage(Quete quete)
     {

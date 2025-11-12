@@ -12,7 +12,7 @@ public partial class PersonnesDetail : ContentPage
         set
         {
             _personnage = value;
-            BindingContext = _personnage; // met à jour le XAML
+            BindingContext = _personnage; 
         }
     }
     public PersonnesDetail()
